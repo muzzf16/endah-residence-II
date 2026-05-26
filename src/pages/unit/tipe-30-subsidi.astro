@@ -1,0 +1,301 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import images
+import tipe30Image from '../../assets/images/tipe_30_facade.png';
+import interiorImage from '../../assets/images/interior_mockup.png';
+import progressRoad from '../../assets/images/progress_road.png';
+
+const title = "Rumah Subsidi Tipe 30/60 Bandar Batang | Endah Residence II";
+const description = "Spesifikasi & KPR rumah subsidi Tipe 30/60 di Bandar, Batang. DP ringan, cicilan flat 1 Juta-an, jalan cor beton 100% jadi, legalitas SHM & PBG/IMB aman.";
+---
+
+<Layout title={title} description={description} unitType="tipe-30">
+  
+  <!-- Breadcrumb Navigation -->
+  <div class="bg-neutral-50 border-b border-neutral-100 py-3 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-2 text-neutral-500 font-semibold">
+      <a href="/" class="hover:text-brand-emerald-800 transition">Beranda</a>
+      <span>/</span>
+      <a href="/unit" class="hover:text-brand-emerald-800 transition">Unit</a>
+      <span>/</span>
+      <span class="text-neutral-800">Tipe 30 Subsidi</span>
+    </div>
+  </div>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Title and Badges -->
+      <div class="space-y-4 mb-8">
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">Subsidi Pemerintah</span>
+          <span class="bg-neutral-100 text-neutral-700 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">SHM Ready</span>
+          <span class="bg-brand-emerald-100 text-brand-emerald-800 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">100% Bebas Banjir</span>
+        </div>
+        
+        <!-- H1 Page Title -->
+        <h1 class="font-outfit font-black text-3xl sm:text-4xl text-neutral-900 leading-tight">
+          Rumah Subsidi Tipe 30 / 60 — Bandar Batang
+        </h1>
+        
+        <p class="text-neutral-500 text-sm max-w-3xl leading-relaxed">
+          Hunian subsidi berkualitas prima dengan desain minimalis eropa modern. Lokasi strategis dekat kawasan industri terpadu, lingkungan sejuk, aman, dan asri untuk keluarga harmonis.
+        </p>
+      </div>
+
+      <!-- Core Gallery & Key Details Side-By-Side -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Image Gallery (Alt rich keywords) -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-neutral-100 aspect-[16/10] bg-neutral-100">
+            <Image 
+              src={tipe30Image} 
+              alt="Fasad depan rumah subsidi Tipe 30 di Perumahan Endah Residence II Bandar Batang" 
+              class="w-full h-full object-cover"
+              sizes="(max-width: 640px) 100vw, 700px"
+              loading="eager"
+            />
+          </div>
+          
+          <!-- Small Grid Thumbnails -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden shadow aspect-[16/10] bg-neutral-100 border border-neutral-100">
+              <Image 
+                src={interiorImage} 
+                alt="Desain interior minimalis modern ruang tamu tipe 30 subsidi" 
+                class="w-full h-full object-cover"
+                sizes="350px"
+                loading="lazy"
+              />
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow aspect-[16/10] bg-neutral-100 border border-neutral-100">
+              <Image 
+                src={progressRoad} 
+                alt="Jalan utama cor beton 100 persen jadi di depan unit Tipe 30 Subsidi" 
+                class="w-full h-full object-cover"
+                sizes="350px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Specs Summary Card & CTA Block -->
+        <div class="lg:col-span-5 bg-neutral-50 rounded-3xl p-6 sm:p-8 border border-neutral-200/50 space-y-6 shadow-sm">
+          <div>
+            <span class="text-[10px] font-bold text-brand-amber-600 tracking-wider uppercase block mb-1">Harga Sangat Terjangkau</span>
+            <span class="font-outfit font-black text-3xl text-neutral-900 block">Rp 166.000.000</span>
+            <span class="text-xs text-neutral-400 font-semibold block mt-1">*Cicilan flat KPR Subsidi hanya 1 Juta-an / bulan</span>
+          </div>
+
+          <!-- Quick Specifications Grid -->
+          <div class="border-t border-neutral-200 pt-6 space-y-3 text-sm text-neutral-600">
+            <h3 class="font-outfit font-extrabold text-neutral-800 text-sm tracking-wide uppercase mb-1">Ringkasan Dimensi</h3>
+            <div class="flex justify-between border-b border-neutral-200/60 pb-2">
+              <span class="font-medium">Luas Bangunan (LB)</span>
+              <span class="font-bold text-neutral-950">30 m²</span>
+            </div>
+            <div class="flex justify-between border-b border-neutral-200/60 pb-2">
+              <span class="font-medium">Luas Tanah (LT)</span>
+              <span class="font-bold text-neutral-950">60 m²</span>
+            </div>
+            <div class="flex justify-between border-b border-neutral-200/60 pb-2">
+              <span class="font-medium">Dimensi Lahan</span>
+              <span class="font-bold text-neutral-950">6m x 10m</span>
+            </div>
+            <div class="flex justify-between border-b border-neutral-200/60 pb-2">
+              <span class="font-medium">Kamar Tidur</span>
+              <span class="font-bold text-neutral-950">2 Unit</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-medium">Kamar Mandi</span>
+              <span class="font-bold text-neutral-950">1 Unit</span>
+            </div>
+          </div>
+
+          <!-- Siteplan remaining units -->
+          <div class="bg-brand-emerald-950 text-white rounded-2xl p-4 space-y-1">
+            <span class="text-[9px] font-bold text-brand-amber-500 uppercase tracking-widest block">Unit Sangat Terbatas</span>
+            <span class="font-outfit font-extrabold text-base block">Sisa Unit Tersedia: 14 Tipe 30</span>
+            <span class="text-[10px] text-brand-emerald-200 block">Jadwalkan survey minggu ini untuk mengamankan blok terbaik Anda!</span>
+          </div>
+
+          <!-- Core Call to Actions -->
+          <div class="space-y-3 pt-2">
+            <a 
+              href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20informasi%20dari%20Website.%20Saya%20tertarik%20dengan%20perumahan%20Anda%20dan%20ingin%20tanya%20tentang%20unit%20Tipe%2030%20(Subsidi).%20Mohon%20infonya." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold py-3.5 rounded-2xl transition duration-300 shadow-xl shadow-brand-emerald-800/10 hover:scale-[1.02] active:scale-[0.98] text-base text-center"
+            >
+              Ajukan Tanya KPR Tipe 30 (WA)
+            </a>
+            
+            <a 
+              href="#simulasi" 
+              class="w-full inline-flex items-center justify-center bg-white hover:bg-neutral-100 text-neutral-800 border border-neutral-300 font-outfit font-bold py-3.5 rounded-2xl transition hover:scale-[1.02] active:scale-[0.98] text-sm text-center"
+            >
+              Lihat Tabel Cicilan Flat
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Technical Specifications Block -->
+      <div class="mt-20 border-t border-neutral-100 pt-16">
+        <h2 class="font-outfit font-black text-2xl text-neutral-900 mb-8">
+          Spesifikasi Teknis Material Premium
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          
+          <div class="space-y-4">
+            
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-outfit font-bold text-base text-neutral-800">Pondasi & Struktur</h3>
+                <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed">
+                  Pondasi batu kali lokal gunung yang solid + Sloof kolom beton bertulang besi ulir SNI menjamin kestabilan pergeseran tanah.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-outfit font-bold text-base text-neutral-800">Dinding & Pembatas</h3>
+                <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed">
+                  Dinding bata plester aci, plamir halus, dilapisi cat dinding interior & eksterior berkualitas tahan cuaca ekstrim.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-outfit font-bold text-base text-neutral-800">Atap & Rangka Atap</h3>
+                <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed">
+                  Konstruksi rangka atap baja ringan Zincalume anti karat + penutup genteng metal berpasir yang hening saat hujan deras.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="space-y-4">
+            
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-outfit font-bold text-base text-neutral-800">Kusen, Pintu & Jendela</h3>
+                <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed">
+                  Kusen pintu dan jendela aluminium coating putih (bebas rayap & muai susut) + pintu utama kayu panil solid cetak pabrik.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-outfit font-bold text-base text-neutral-800">Instalasi Air & Listrik</h3>
+                <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed">
+                  Listrik PLN daya 1300 Watt standar token + Instalasi air bersih sumur artesis lancar jernih lengkap dengan pompa air terpasang.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm0 0h4l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <h3 class="font-outfit font-bold text-base text-neutral-800">Kamar Mandi</h3>
+                <p class="text-xs sm:text-sm text-neutral-500 leading-relaxed">
+                  Lantai keramik kasar antislip + kloset jongkok keramik premium + dinding kamar mandi keramik setinggi 1.5 meter bersih.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- KPR Simulation Table -->
+      <div id="simulasi" class="mt-20 border-t border-neutral-100 pt-16">
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-10">
+          <span class="text-xs font-bold text-brand-amber-600 tracking-widest uppercase">Simulasi Flat Bulanan</span>
+          <h2 class="font-outfit font-extrabold text-2xl text-neutral-900">Tabel Simulasi Cicilan KPR Subsidi</h2>
+          <p class="text-neutral-500 text-xs sm:text-sm">
+            Program pembiayaan rumah subsidi menggunakan KPR bersubsidi dengan suku bunga flat 5% yang dijamin oleh Pemerintah Republik Indonesia selama masa angsuran.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-neutral-200 shadow-sm bg-white">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-neutral-900 text-white font-outfit uppercase tracking-wider text-[10px] sm:text-xs">
+              <tr>
+                <th class="p-4 sm:p-5">Harga Rumah</th>
+                <th class="p-4 sm:p-5">Tenor (Tahun)</th>
+                <th class="p-4 sm:p-5">Cicilan (Per Bulan)</th>
+                <th class="p-4 sm:p-5">Sifat Bunga</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-neutral-200 text-neutral-700 font-medium">
+              <tr class="hover:bg-neutral-50 transition">
+                <td class="p-4 sm:p-5 font-bold">Rp 166.000.000</td>
+                <td class="p-4 sm:p-5">10 Tahun</td>
+                <td class="p-4 sm:p-5 text-neutral-950 font-extrabold">Rp 1.700.000-an / bln</td>
+                <td class="p-4 sm:p-5 text-emerald-700 font-semibold">Flat 5% Sampai Lunas</td>
+              </tr>
+              <tr class="hover:bg-neutral-50 transition">
+                <td class="p-4 sm:p-5 font-bold">Rp 166.000.000</td>
+                <td class="p-4 sm:p-5">15 Tahun</td>
+                <td class="p-4 sm:p-5 text-neutral-950 font-extrabold">Rp 1.300.000-an / bln</td>
+                <td class="p-4 sm:p-5 text-emerald-700 font-semibold">Flat 5% Sampai Lunas</td>
+              </tr>
+              <tr class="hover:bg-neutral-50 transition">
+                <td class="p-4 sm:p-5 font-bold">Rp 166.000.000</td>
+                <td class="p-4 sm:p-5">20 Tahun</td>
+                <td class="p-4 sm:p-5 text-neutral-950 font-extrabold">Rp 1.000.000-an / bln</td>
+                <td class="p-4 sm:p-5 text-emerald-700 font-semibold">Flat 5% Sampai Lunas</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="p-4 sm:p-5 bg-neutral-50 border-t border-neutral-200 text-neutral-500 text-[11px] sm:text-xs">
+            <strong>Catatan KPR:</strong> Angka di atas merupakan simulasi dasar. DP dapat bervariasi bergantung promo bulan berjalan dan hasil analisis kelayakan kredit pihak Bank penyalur KPR (BTN, BNI, Mandiri Syariah, dll).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>

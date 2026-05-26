@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import property assets
+import tipe30Image from '../../assets/images/tipe_30_facade.png';
+import tipe36Image from '../../assets/images/tipe_36_facade.png';
+
+const title = "Pilihan Tipe Unit Rumah Murah & Premium | Endah Residence II";
+const description = "Bandingkan Tipe 30 Subsidi & Tipe 36 Komersil di Endah Residence II Bandar Batang. Temukan cicilan KPR flat bulanan terbaik dengan spesifikasi terjamin.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Page Header -->
+  <section class="bg-gradient-to-b from-brand-emerald-50/50 to-white pt-16 pb-12 border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 bg-brand-emerald-100 text-brand-emerald-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+        Katalog Resmi Perumahan
+      </div>
+      <h1 class="font-outfit font-black text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight">
+        Pilihan Rumah untuk Keluarga Anda
+      </h1>
+      <p class="text-neutral-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Kami menyediakan 2 model unit pilihan yang dirancang matang, efisien tata ruang, dan dibangun menggunakan material kokoh tahan lama.
+      </p>
+    </div>
+  </section>
+
+  <!-- Catalog Comparisons Grid -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        
+        <!-- Unit 1: Tipe 30 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-neutral-100 flex flex-col hover:shadow-xl transition duration-300">
+          <div class="relative h-64 sm:h-80">
+            <Image 
+              src={tipe30Image} 
+              alt="Model Tipe 30 Rumah Subsidi Bandar Batang" 
+              class="w-full h-full object-cover"
+              sizes="(max-width: 640px) 100vw, 500px"
+              loading="eager"
+            />
+            <div class="absolute top-4 left-4 bg-brand-emerald-800 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+              Rumah Subsidi
+            </div>
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow font-outfit font-black text-brand-emerald-950 text-sm">
+              Mulai Rp 166 Juta-an
+            </div>
+          </div>
+          
+          <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <h2 class="font-outfit font-extrabold text-2xl text-neutral-950">Tipe 30 / 60 — Subsidi Cerdas</h2>
+              <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+                Tipe perumahan bersubsidi pemerintah dengan skema cicilan KPR flat syariah yang sangat ringan bagi pasangan baru menikah dan karyawan pabrik KIT Batang.
+              </p>
+              
+              <ul class="space-y-3 text-xs sm:text-sm text-neutral-600 border-t border-neutral-100 pt-4">
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Pondasi batu kali & struktur beton bertulang kuat</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Dinding bata plester aci finishing cat rapi</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Kusen aluminium & rangka atap baja ringan awet</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 border-t border-neutral-100 pt-6">
+              <a 
+                href="/unit/tipe-30-subsidi" 
+                class="w-full inline-flex items-center justify-center bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-outfit font-bold py-3.5 rounded-xl transition text-xs sm:text-sm text-center"
+              >
+                Lihat Detail Unit
+              </a>
+              <a 
+                href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20informasi%20dari%20Website.%20Saya%20tertarik%20dengan%20perumahan%20Anda%20dan%20ingin%20tanya%20tentang%20unit%20Tipe%2030%20(Subsidi).%20Mohon%20infonya." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold py-3.5 rounded-xl transition text-xs sm:text-sm text-center shadow-md shadow-brand-emerald-800/10"
+              >
+                Brosur & Cicilan Flat
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit 2: Tipe 36 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-neutral-100 flex flex-col hover:shadow-xl transition duration-300">
+          <div class="relative h-64 sm:h-80">
+            <Image 
+              src={tipe36Image} 
+              alt="Model Tipe 36 Rumah Komersil Bandar Batang" 
+              class="w-full h-full object-cover"
+              sizes="(max-width: 640px) 100vw, 500px"
+              loading="eager"
+            />
+            <div class="absolute top-4 left-4 bg-brand-amber-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+              Komersil Premium
+            </div>
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl shadow font-outfit font-black text-brand-emerald-950 text-sm">
+              Mulai Rp 240 Juta-an
+            </div>
+          </div>
+          
+          <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <h2 class="font-outfit font-extrabold text-2xl text-neutral-950">Tipe 36 / 72 — Premium Eksklusif</h2>
+              <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+                Tipe komersial berukuran lebih luas dengan desain modern facade yang dihiasi aksen panel kayu eksotis, carport lapang, dan keleluasaan tanah sisa di halaman belakang.
+              </p>
+              
+              <ul class="space-y-3 text-xs sm:text-sm text-neutral-600 border-t border-neutral-100 pt-4">
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Dinding bata merah kokoh plester aci finishing cat Mowilex</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Lantai keramik homogeneous tile ukuran 60x60 mewah</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Kloset duduk premium & shower mandi modern</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 border-t border-neutral-100 pt-6">
+              <a 
+                href="/unit/tipe-36-komersil" 
+                class="w-full inline-flex items-center justify-center bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-outfit font-bold py-3.5 rounded-xl transition text-xs sm:text-sm text-center"
+              >
+                Lihat Detail Unit
+              </a>
+              <a 
+                href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20informasi%20dari%20Website.%20Saya%20tertarik%20dengan%20perumahan%20Anda%20dan%20ingin%20tanya%20tentang%20unit%20Tipe%2036%20(Komersil).%20Mohon%20infonya." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold py-3.5 rounded-xl transition text-xs sm:text-sm text-center shadow-md shadow-brand-emerald-800/10"
+              >
+                Hubungi & Survey Unit
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

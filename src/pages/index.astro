@@ -1,0 +1,507 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import local generated property assets
+import heroImage from '../assets/images/hero_estate.png';
+import tipe30Image from '../assets/images/tipe_30_facade.png';
+import tipe36Image from '../assets/images/tipe_36_facade.png';
+import progressRoad from '../assets/images/progress_road.png';
+import progressHandover from '../assets/images/progress_handover.png';
+import interiorMockup from '../assets/images/interior_mockup.png';
+
+const title = "Endah Residence II - Hunian Terbaik di Bandar Batang | SHM Ready";
+const description = "Perumahan subsidi & komersil terbaik di Bandar, Batang. Lokasi strategis dekat kawasan industri KITB, 100% bebas banjir, sertifikat SHM & PBG/IMB aman. Cicilan ringan!";
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-brand-emerald-50/70 to-white pt-12 pb-20 md:py-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Text Info -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-brand-emerald-100/60 border border-brand-emerald-200 text-brand-emerald-900 px-4 py-1.5 rounded-full text-xs font-bold font-outfit tracking-wide uppercase">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-emerald-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-emerald-600"></span>
+            </span>
+            PROMO DP RINGAN & CICILAN FLAT 2026
+          </div>
+          
+          <!-- Local SEO Core H1 Headline -->
+          <h1 class="font-outfit font-extrabold text-4xl sm:text-5xl lg:text-6xl text-neutral-900 leading-tight">
+            Hunian Terbaik & Aman di <span class="bg-gradient-to-r from-brand-emerald-800 to-brand-emerald-600 bg-clip-text text-transparent">Bandar Batang</span>
+          </h1>
+          
+          <p class="text-neutral-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Miliki rumah impian keluarga Anda di <strong>Endah Residence II</strong>. Pilihan terbaik untuk hunian subsidi nyaman & komersil mewah dengan jaminan legalitas 100% aman (SHM & PBG siap balik nama).
+          </p>
+
+          <!-- Call to actions -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+            <a 
+              href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20informasi%20dari%20Website.%20Saya%20tertarik%20dengan%20perumahan%20Anda%20dan%20ingin%20tanya%20mengenai%20unit.%20Mohon%20infonya." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold px-8 py-4 rounded-2xl transition duration-300 shadow-xl shadow-brand-emerald-800/20 hover:scale-[1.02] active:scale-[0.98] text-base"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              Konsultasi WhatsApp (Gratis)
+            </a>
+            
+            <a 
+              href="#lokasi" 
+              class="inline-flex items-center justify-center bg-white hover:bg-neutral-50 text-neutral-800 border-2 border-neutral-200 font-outfit font-bold px-8 py-4 rounded-2xl transition duration-300 hover:scale-[1.02] active:scale-[0.98] text-base"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Jadwal Survey Lokasi
+            </a>
+          </div>
+
+          <!-- Trust highlights -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
+            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-xl border border-neutral-100">
+              <span class="block font-outfit font-black text-xl text-brand-emerald-800">100%</span>
+              <span class="text-xs font-semibold text-neutral-500">Bebas Banjir</span>
+            </div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-xl border border-neutral-100">
+              <span class="block font-outfit font-black text-xl text-brand-emerald-800">SHM</span>
+              <span class="text-xs font-semibold text-neutral-500">Sertifikat Ready</span>
+            </div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-xl border border-neutral-100">
+              <span class="block font-outfit font-black text-xl text-brand-emerald-800">PBG/IMB</span>
+              <span class="text-xs font-semibold text-neutral-500">Aman & Terbit</span>
+            </div>
+            <div class="bg-white/60 backdrop-blur-sm p-3 rounded-xl border border-neutral-100">
+              <span class="block font-outfit font-black text-xl text-brand-emerald-800">20 Menit</span>
+              <span class="text-xs font-semibold text-neutral-500">Ke KIT Batang</span>
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- Right Hero Image Display -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-brand-emerald-500 to-brand-amber-500 rounded-3xl opacity-10 blur-2xl"></div>
+          <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.01] transition duration-500">
+            <Image 
+              src={heroImage} 
+              alt="Perumahan Endah Residence II Bandar Batang modern estate banner" 
+              class="w-full h-auto object-cover"
+              sizes="(max-width: 640px) 100vw, 600px"
+              loading="eager"
+            />
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-neutral-100/50 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-brand-emerald-800 tracking-wider uppercase block">Proyek Aktif Nyata</span>
+                <span class="font-outfit font-extrabold text-neutral-800 text-sm">Update Kondisi Jalan Cor 100% Jadi</span>
+              </div>
+              <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full uppercase">Terpercaya</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- USP & Trust Signals Section -->
+  <section class="py-16 bg-white border-y border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-bold text-brand-amber-600 tracking-widest uppercase">Keunggulan Utama Kami</span>
+        <h2 class="font-outfit font-extrabold text-3xl text-neutral-900">
+          Mengapa Memilih Endah Residence II?
+        </h2>
+        <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+          Jangan tertipu developer abal-abal yang menjanjikan tanah murah namun tanpa izin lengkap. Kami mengutamakan kenyamanan, keamanan legalitas, dan kedekatan akses.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- USP 1: Legalitas -->
+        <div class="bg-neutral-50 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/50 border border-neutral-100 p-6 rounded-2xl transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-outfit font-bold text-lg text-neutral-900 mb-2">Legalitas Aman (SHM & PBG)</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+            Status legalitas terjamin aman. Sertifikat Hak Milik (SHM) dan Persetujuan Bangunan Gedung (PBG/IMB) sudah siap untuk balik nama pembeli.
+          </p>
+        </div>
+
+        <!-- USP 2: Bebas Banjir -->
+        <div class="bg-neutral-50 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/50 border border-neutral-100 p-6 rounded-2xl transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <h3 class="font-outfit font-bold text-lg text-neutral-900 mb-2">100% Bebas Banjir</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+            Kawasan dibangun di atas dataran stabil yang tinggi di Batiombo Bandar, menjamin keamanan hunian dari resiko genangan air atau banjir tahunan.
+          </p>
+        </div>
+
+        <!-- USP 3: KIT Batang -->
+        <div class="bg-neutral-50 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/50 border border-neutral-100 p-6 rounded-2xl transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="font-outfit font-bold text-lg text-neutral-900 mb-2">Dekat Kawasan Industri</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+            Hanya 20 menit berkendara menuju Kawasan Industri Terpadu Batang (KITB), menjadikannya ideal bagi karyawan industri dan investor properti.
+          </p>
+        </div>
+
+        <!-- USP 4: Developer Asosiasi -->
+        <div class="bg-neutral-50 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/50 border border-neutral-100 p-6 rounded-2xl transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center mb-5 group-hover:scale-110 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <h3 class="font-outfit font-bold text-lg text-neutral-900 mb-2">Anggota REI Resmi</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+            Kami terdaftar resmi dalam Asosiasi Real Estate Indonesia (REI), menjamin standar kerja developer yang taat aturan hukum dan bersertifikasi.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Unit Preview Section -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 text-center md:text-left">
+        <div>
+          <span class="text-xs font-bold text-brand-amber-600 tracking-widest uppercase block mb-1">Katalog Rumah Pilihan</span>
+          <h2 class="font-outfit font-extrabold text-3xl text-neutral-900">Pilihan Tipe Unit Hunian</h2>
+        </div>
+        <a 
+          href="/unit" 
+          class="inline-flex items-center text-sm font-bold text-brand-emerald-800 hover:text-brand-emerald-600 transition"
+        >
+          Lihat Semua Katalog Unit
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        
+        <!-- Unit Card 1: Tipe 30 Subsidi -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-100 hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64 sm:h-72">
+            <Image 
+              src={tipe30Image} 
+              alt="Perumahan subsidi Tipe 30 Bandar Batang tampak depan" 
+              class="w-full h-full object-cover"
+              sizes="(max-width: 640px) 100vw, 500px"
+              loading="lazy"
+            />
+            <div class="absolute top-4 left-4 bg-brand-emerald-800 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Rumah Subsidi
+            </div>
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-xl shadow font-outfit font-black text-brand-emerald-950 text-sm">
+              Mulai Rp 166 Juta-an
+            </div>
+          </div>
+          
+          <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+            <div class="space-y-4">
+              <h3 class="font-outfit font-extrabold text-2xl text-neutral-950">Tipe 30 / 60 (Subsidi)</h3>
+              <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+                Pilihan tepat bagi pasangan muda atau pekerja kawasan industri. Memberikan efisiensi biaya dengan kualitas bangunan subsidi yang jauh di atas rata-rata standar.
+              </p>
+              
+              <!-- Quick specs -->
+              <div class="grid grid-cols-3 gap-2 border-y border-neutral-100 py-4 text-xs font-semibold text-neutral-600">
+                <div class="flex items-center gap-1.5 justify-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald-500"></span>
+                  2 Kamar Tidur
+                </div>
+                <div class="flex items-center gap-1.5 justify-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald-500"></span>
+                  1 Kamar Mandi
+                </div>
+                <div class="flex items-center gap-1.5 justify-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald-500"></span>
+                  LT 60m² / LB 30m²
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 grid grid-cols-2 gap-4">
+              <a 
+                href="/unit/tipe-30-subsidi" 
+                class="w-full inline-flex items-center justify-center bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-outfit font-bold py-3 rounded-xl transition text-sm text-center"
+              >
+                Detail Spesifikasi
+              </a>
+              <a 
+                href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20informasi%20dari%20Website.%20Saya%20tertarik%20dengan%20perumahan%20Anda%20dan%20ingin%20tanya%20tentang%20unit%20Tipe%2030%20(Subsidi).%20Mohon%20infonya." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold py-3 rounded-xl transition text-sm text-center shadow-lg shadow-brand-emerald-800/10"
+              >
+                Tanya Cicilan WA
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit Card 2: Tipe 36 Komersil -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-neutral-100 hover:shadow-2xl hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64 sm:h-72">
+            <Image 
+              src={tipe36Image} 
+              alt="Perumahan komersil premium Tipe 36 Bandar Batang tampak depan" 
+              class="w-full h-full object-cover"
+              sizes="(max-width: 640px) 100vw, 500px"
+              loading="lazy"
+            />
+            <div class="absolute top-4 left-4 bg-brand-amber-500 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Komersil Premium
+            </div>
+            <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-xl shadow font-outfit font-black text-brand-emerald-950 text-sm">
+              Mulai Rp 240 Juta-an
+            </div>
+          </div>
+          
+          <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+            <div class="space-y-4">
+              <h3 class="font-outfit font-extrabold text-2xl text-neutral-950">Tipe 36 / 72 (Komersil)</h3>
+              <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+                Tipe eksklusif dengan area lahan lebih luas, desain facade bernuansa batu alam & kayu premium, serta detail finishing interior yang lebih mewah dan privat.
+              </p>
+              
+              <!-- Quick specs -->
+              <div class="grid grid-cols-3 gap-2 border-y border-neutral-100 py-4 text-xs font-semibold text-neutral-600">
+                <div class="flex items-center gap-1.5 justify-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald-500"></span>
+                  2 Kamar Tidur
+                </div>
+                <div class="flex items-center gap-1.5 justify-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald-500"></span>
+                  1 Kamar Mandi
+                </div>
+                <div class="flex items-center gap-1.5 justify-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald-500"></span>
+                  LT 72m² / LB 36m²
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 grid grid-cols-2 gap-4">
+              <a 
+                href="/unit/tipe-36-komersil" 
+                class="w-full inline-flex items-center justify-center bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-outfit font-bold py-3 rounded-xl transition text-sm text-center"
+              >
+                Detail Spesifikasi
+              </a>
+              <a 
+                href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20informasi%20dari%20Website.%20Saya%20tertarik%20dengan%20perumahan%20Anda%20dan%20ingin%20tanya%20tentang%20unit%20Tipe%2036%20(Komersil).%20Mohon%20infonya." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold py-3 rounded-xl transition text-sm text-center shadow-lg shadow-brand-emerald-800/10"
+              >
+                Tanya Cicilan WA
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Progres Pembangunan Section (Social Proof / Trust Factor) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-bold text-brand-amber-600 tracking-widest uppercase">Bukti Nyata Pembangunan</span>
+        <h2 class="font-outfit font-extrabold text-3xl text-neutral-900">Update Progres Proyek & Penyerahan</h2>
+        <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+          Kami berkomitmen menjaga kecepatan bangun infrastruktur perumahan. Berikut adalah dokumentasi asli dari lapangan mengenai aktivitas serah terima kunci dan pengerjaan jalan cor beton.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Progress 1 -->
+        <div class="group space-y-4">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-md border border-neutral-100">
+            <Image 
+              src={progressRoad} 
+              alt="Update pengerjaan cor jalan beton di Perumahan Endah Residence II" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              sizes="(max-width: 640px) 100vw, 380px"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="bg-brand-amber-500 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Infrastruktur</span>
+            </div>
+          </div>
+          <div class="space-y-1">
+            <h3 class="font-outfit font-bold text-lg text-neutral-900">Jalan Cor Beton Utama</h3>
+            <p class="text-xs sm:text-sm text-neutral-500">
+              Akses jalan utama perumahan dicor beton setebal 15cm, menjamin kenyamanan kendaraan bermotor di segala musim cuaca.
+            </p>
+          </div>
+        </div>
+
+        <!-- Progress 2 -->
+        <div class="group space-y-4">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-md border border-neutral-100">
+            <Image 
+              src={progressHandover} 
+              alt="Acara serah terima kunci unit rumah subsidi kepada pembeli di Endah Residence Batang" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              sizes="(max-width: 640px) 100vw, 380px"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="bg-brand-emerald-800 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Serah Terima</span>
+            </div>
+          </div>
+          <div class="space-y-1">
+            <h3 class="font-outfit font-bold text-lg text-neutral-900">Kunci Diserahkan ke Konsumen</h3>
+            <p class="text-xs sm:text-sm text-neutral-500">
+              Penyerahan kunci secara rutin kepada para pembeli yang sudah menyelesaikan proses KPR bank, menandai terwujudnya rumah impian mereka.
+            </p>
+          </div>
+        </div>
+
+        <!-- Progress 3 -->
+        <div class="group space-y-4">
+          <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-md border border-neutral-100">
+            <Image 
+              src={interiorMockup} 
+              alt="Desain tata ruang interior minimalis modern ruang tamu tipe 36 komersil" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              sizes="(max-width: 640px) 100vw, 380px"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-90"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="bg-brand-emerald-800 text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Interior</span>
+            </div>
+          </div>
+          <div class="space-y-1">
+            <h3 class="font-outfit font-bold text-lg text-neutral-900">Tata Ruang Interior Modern</h3>
+            <p class="text-xs sm:text-sm text-neutral-500">
+              Desain tata ruang fungsional yang memaksimalkan masuknya ventilasi udara segar dan pencahayaan matahari alami di siang hari.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a 
+          href="/galeri-progres" 
+          class="inline-flex items-center justify-center bg-neutral-950 hover:bg-neutral-800 text-white font-outfit font-bold px-8 py-3.5 rounded-xl transition duration-300 hover:scale-[1.02] active:scale-[0.98] text-sm"
+        >
+          Lihat Galeri Foto Selengkapnya
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location & Proximity Section -->
+  <section id="lokasi" class="py-20 bg-neutral-50 border-t border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Proximity Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="space-y-2">
+            <span class="text-xs font-bold text-brand-amber-600 tracking-widest uppercase block">Lokasi Sangat Strategis</span>
+            <h2 class="font-outfit font-extrabold text-3xl text-neutral-950">Akses Mudah ke Berbagai Fasilitas Penting</h2>
+          </div>
+          
+          <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+            Berlokasi di <strong>Jl. Sendang-Tulis, Batiombo, Bandar, Batang</strong>. Menawarkan akses jalan aspal datar yang lebar, sangat mudah dijangkau dari kawasan perkotaan Bandar maupun jalan pantura Tulis.
+          </p>
+
+          <!-- List of Proximities -->
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-neutral-200/50 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-brand-emerald-100 flex items-center justify-center text-brand-emerald-800 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div>
+                <span class="font-outfit font-bold text-neutral-800 text-sm sm:text-base block">20 Menit ke KIT Batang</span>
+                <span class="text-[11px] sm:text-xs text-neutral-500">Kawasan Industri Terpadu Batang (Grand Batang City)</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-neutral-200/50 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-brand-emerald-100 flex items-center justify-center text-brand-emerald-800 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+              </div>
+              <div>
+                <span class="font-outfit font-bold text-neutral-800 text-sm sm:text-base block">10 Menit ke Gerbang Tol Tulis</span>
+                <span class="text-[11px] sm:text-xs text-neutral-500">Akses tol utama penghubung Semarang, Batang, dan Jakarta</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-neutral-200/50 shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-brand-emerald-100 flex items-center justify-center text-brand-emerald-800 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+              <div>
+                <span class="font-outfit font-bold text-neutral-800 text-sm sm:text-base block">5 Menit ke Alun-Alun & Pasar Bandar</span>
+                <span class="text-[11px] sm:text-xs text-neutral-500">Pusat perbelanjaan logistik makanan dan fasilitas perbankan lokal</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Right: Maps Embed -->
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl p-4 border border-neutral-200/60 aspect-[4/3] sm:aspect-[16/10] lg:aspect-square xl:aspect-[16/10] relative w-full">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3340578665795!2d109.800109!3d-7.014264999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDAnNTEuMyJTIDEwOcKwNDgnMDAuNCJF!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid" 
+              class="w-full h-full border-0 rounded-2xl" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Peta Lokasi Perumahan Endah Residence II Bandar Batang"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

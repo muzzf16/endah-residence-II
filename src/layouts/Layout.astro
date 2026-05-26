@@ -1,0 +1,163 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  unitType?: 'tipe-30' | 'tipe-36' | 'general';
+}
+
+const { 
+  title, 
+  description, 
+  ogImage = '/src/assets/images/hero_estate.png', 
+  unitType = 'general' 
+} = Astro.props;
+
+const siteUrl = 'https://endahresidence.com';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
+
+// Resolve Open Graph Image to absolute URL
+const absoluteOgImage = ogImage.startsWith('http') 
+  ? ogImage 
+  : new URL(ogImage, siteUrl).href;
+
+const isHome = Astro.url.pathname === '/' || Astro.url.pathname === '';
+
+// Schema JSON-LD Configuration
+const agentSchema = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Endah Residence II",
+  "image": "https://endahresidence.com/assets/hero_estate.png",
+  "@id": "https://endahresidence.com/#agent",
+  "url": "https://endahresidence.com",
+  "telephone": "082134994060",
+  "priceRange": "Rp150.000.000 - Rp350.000.000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Sendang-Tulis, Batiombo, Bandar",
+    "addressLocality": "Batang",
+    "addressRegion": "Jawa Tengah",
+    "postalCode": "51254",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -7.0142,
+    "longitude": 109.8005
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  }
+};
+
+// Generate Breadcrumbs Schema
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = pathSegments.map((segment, index) => {
+  const url = `${siteUrl}/${pathSegments.slice(0, index + 1).join('/')}`;
+  const name = segment
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase())
+    .replace('Tipe 30 Subsidi', 'Tipe 30 (Subsidi)')
+    .replace('Tipe 36 Komersil', 'Tipe 36 (Komersil)');
+  return {
+    "@type": "ListItem",
+    "position": index + 2,
+    "name": name,
+    "item": url
+  };
+});
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Beranda",
+      "item": siteUrl
+    },
+    ...breadcrumbItems
+  ]
+};
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absoluteOgImage} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={absoluteOgImage} />
+
+    <!-- Google Fonts (Outfit & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" 
+      rel="stylesheet" 
+    />
+
+    <!-- Local Business / Breadcrumbs Schema Injection -->
+    {isHome ? (
+      <script type="application/ld+json" set:html={JSON.stringify(agentSchema)} />
+    ) : (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
+  </head>
+  <body class="flex flex-col min-h-screen selection:bg-brand-emerald-700 selection:text-white">
+    <!-- Header Navigation -->
+    <Header />
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer Area -->
+    <Footer />
+
+    <!-- Floating Conversional WhatsApp Button -->
+    <WhatsAppButton unitType={unitType} />
+  </body>
+</html>

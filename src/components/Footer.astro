@@ -1,0 +1,141 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-neutral-900 text-neutral-300 pt-16 pb-8 border-t border-neutral-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-neutral-800">
+      
+      <!-- Brand & NAP Block (Krusial untuk Local SEO) -->
+      <div class="space-y-4">
+        <a href="/" class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-emerald-800 to-brand-emerald-600 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <span class="font-outfit font-extrabold text-xl text-white tracking-tight leading-none">
+            ENDAH RESIDENCE II
+          </span>
+        </a>
+        <p class="text-xs text-neutral-400 font-medium">
+          Hunian subsidi dan komersil berkualitas tinggi di Bandar, Batang. Memberikan transparansi legalitas (SHM & PBG aman) untuk investasi keluarga Anda.
+        </p>
+        
+        <!-- NAP (Name, Address, Phone) - MUST BE CONSISTENT -->
+        <div class="pt-4 space-y-3 text-sm">
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-amber-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span class="text-neutral-300 leading-snug">
+              <strong>Endah Residence II</strong><br />
+              Jl. Sendang-Tulis, Batiombo, Bandar, Batang, Jawa Tengah, 51254
+            </span>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-amber-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9 6 9-6" />
+            </svg>
+            <a href="mailto:info@endahresidence.com" class="hover:text-white transition">info@endahresidence.com</a>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-amber-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span class="text-neutral-300">
+              <a href="tel:082134994060" class="hover:text-white transition">0821 3499 4060</a> / <br />
+              <a href="tel:087880211288" class="hover:text-white transition">0878 8021 1288</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links (Core Pages Navigation) -->
+      <div>
+        <h3 class="font-outfit font-bold text-white text-md tracking-wider uppercase mb-6">Menu Halaman</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/" class="hover:text-white hover:underline transition">Beranda Utama</a></li>
+          <li><a href="/unit" class="hover:text-white hover:underline transition">Katalog Pilihan Unit</a></li>
+          <li><a href="/galeri-progres" class="hover:text-white hover:underline transition">Galeri Progres Fisik</a></li>
+          <li><a href="/tentang-kami" class="hover:text-white hover:underline transition">Tentang Endah Residence</a></li>
+          <li><a href="/kontak" class="hover:text-white hover:underline transition">Hubungi & Kontak Kami</a></li>
+        </ul>
+      </div>
+
+      <!-- Product Silos (Tipe Unit) -->
+      <div>
+        <h3 class="font-outfit font-bold text-white text-md tracking-wider uppercase mb-6">Pilihan Tipe Unit</h3>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="/unit/tipe-30-subsidi" class="hover:text-white hover:underline transition flex items-center justify-between">
+              <span>Tipe 30 (Subsidi)</span>
+              <span class="text-[10px] font-bold bg-brand-emerald-800 text-brand-emerald-100 px-2 py-0.5 rounded uppercase">Subsidi</span>
+            </a>
+          </li>
+          <li>
+            <a href="/unit/tipe-36-komersil" class="hover:text-white hover:underline transition flex items-center justify-between">
+              <span>Tipe 36 (Komersil)</span>
+              <span class="text-[10px] font-bold bg-brand-amber-600 text-white px-2 py-0.5 rounded uppercase">Komersil</span>
+            </a>
+          </li>
+        </ul>
+        <div class="mt-8">
+          <h4 class="font-outfit font-bold text-neutral-400 text-xs tracking-wider uppercase mb-3">Target Lokasi Terdekat</h4>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="bg-neutral-800 text-neutral-400 px-2.5 py-1 rounded">Bandar</span>
+            <span class="bg-neutral-800 text-neutral-400 px-2.5 py-1 rounded">Batang</span>
+            <span class="bg-neutral-800 text-neutral-400 px-2.5 py-1 rounded">Tulis</span>
+            <span class="bg-neutral-800 text-neutral-400 px-2.5 py-1 rounded">KIT Batang</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social & Trust Badges + Google Maps Map Profile -->
+      <div class="space-y-6">
+        <h3 class="font-outfit font-bold text-white text-md tracking-wider uppercase mb-4">Lokasi Google Maps</h3>
+        <a 
+          href="https://maps.google.com/?q=Batiombo+Bandar+Batang+Endah+Residence" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="block group rounded-xl overflow-hidden bg-neutral-800 p-3 hover:bg-neutral-700 transition"
+        >
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-amber-500/20 flex items-center justify-center group-hover:scale-105 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs font-bold text-white block group-hover:text-brand-amber-500 transition">Klik Rute Petunjuk Jalan</span>
+              <span class="text-[10px] text-neutral-400">Buka di Aplikasi Google Maps</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Legal Trust Signal Badges -->
+        <div class="border-t border-neutral-800 pt-4 flex gap-4">
+          <div class="flex items-center gap-1.5 bg-neutral-800/50 px-3 py-1.5 rounded-lg border border-neutral-800">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span class="text-[10px] font-bold text-neutral-300 tracking-wide uppercase">Legalitas SHM Ready</span>
+          </div>
+          <div class="flex items-center gap-1.5 bg-neutral-800/50 px-3 py-1.5 rounded-lg border border-neutral-800">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span class="text-[10px] font-bold text-neutral-300 tracking-wide uppercase">PBG/IMB Lengkap</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Footer copyright info -->
+    <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500 font-medium">
+      <p>© {currentYear} Endah Residence II. All Rights Reserved. Developer Resmi Bandar, Batang.</p>
+      <div class="flex gap-6">
+        <a href="/robots.txt" class="hover:text-neutral-400 transition">Robots.txt</a>
+        <a href="/sitemap-index.xml" class="hover:text-neutral-400 transition">Sitemap.xml</a>
+      </div>
+    </div>
+  </div>
+</footer>

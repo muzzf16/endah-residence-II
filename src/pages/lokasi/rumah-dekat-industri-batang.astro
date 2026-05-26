@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import images
+import progressRoad from '../../assets/images/progress_road.png';
+
+const title = "Rumah Dekat Kawasan Industri Batang (KITB) Murah | Endah Residence II";
+const description = "Mencari rumah dekat Kawasan Industri Terpadu Batang? Endah Residence II Bandar berjarak hanya 20 menit dari KITB dengan akses jalan cor aspal mulus.";
+
+const faqList = [
+  {
+    question: "Berapa lama waktu tempuh dari perumahan ke Kawasan Industri Terpadu Batang (KITB)?",
+    answer: "Hanya sekitar 20 menit berkendara melalui rute jalan raya Bandar-Tulis yang lebar dan aspal mulus, menjadikannya sangat ideal untuk komuter harian karyawan pabrik industri."
+  },
+  {
+    question: "Apakah perumahan di Bandar ini memiliki potensi investasi yang bagus?",
+    answer: "Sangat bagus. Dengan ribuan pekerja ahli dan ekspatriat berdatangan ke KITB, nilai sewa hunian dan harga tanah (capital gain) di sekitar Bandar diproyeksikan melonjak 10% - 15% setiap tahunnya."
+  },
+  {
+    question: "Apakah ada sarana transportasi umum dari perumahan ke kawasan industri?",
+    answer: "Tersedia jaringan angkutan lokal serta rute jalan beraspal datar yang sangat mudah diakses oleh armada antar-jemput karyawan pabrik swasta."
+  }
+];
+
+const pageUrl = "https://endahresidence.com/lokasi/rumah-dekat-industri-batang";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<Layout title={title} description={description}>
+  <!-- Schema injection -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-brand-emerald-50/70 to-white pt-16 pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Text Info -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <span class="inline-flex bg-brand-emerald-100 text-brand-emerald-800 text-[10px] font-black px-3.5 py-1 rounded-full uppercase tracking-widest border border-brand-emerald-200">
+            SEO Landing Page: Area Industri Batang
+          </span>
+          <h1 class="font-outfit font-black text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight">
+            Hunian Strategis Dekat Kawasan Industri Batang (KITB)
+          </h1>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Pekerjaan cemerlang di zona industri modern layak diimbangi dengan tempat tinggal yang tenang dan sejuk. Endah Residence II Bandar menawarkan lokasi transit komuter ideal berjarak hanya 20 menit dari *Grand Batang City* (KITB).
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+            <a 
+              href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20halaman%20Rumah%20Dekat%20Industri%20Batang%20dari%20website.%20Mohon%20brosurnya." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold px-8 py-3.5 rounded-xl transition shadow shadow-brand-emerald-800/10"
+            >
+              Hubungi Marketing Kemitraan KITB
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side Mockup -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+            <Image 
+              src={progressRoad} 
+              alt="Akses jalan infrastruktur jalan cor dekat kawasan industri Batang" 
+              class="w-full h-auto object-cover"
+              sizes="(max-width: 640px) 100vw, 450px"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Local Area Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
+      
+      <div class="space-y-4">
+        <h2 class="font-outfit font-black text-2xl sm:text-3xl text-neutral-900">Mengapa Karyawan KITB Memilih Tinggal di Bandar Batang?</h2>
+        <p class="text-neutral-500 text-sm leading-relaxed">
+          Kawasan Industri Terpadu Batang (KITB) merupakan salah satu pusat industri terbesar di Asia Tenggara yang mendatangkan puluhan ribu tenaga kerja pendatang. Karyawan cerdas memilih bertempat tinggal di **Bandar** karena berbagai alasan keunggulan lingkungan komuter berikut ini:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-100 space-y-3">
+          <h3 class="font-outfit font-bold text-lg text-neutral-800">☕ Suhu Udara Dingin & Sejuk</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm">
+            Setelah seharian lelah beraktivitas di area pabrik pesisir pantai yang cenderung berhawa panas dan bising, Anda dapat pulang beristirahat dengan hening di udara pegunungan sejuk Bandar.
+          </p>
+        </div>
+        <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-100 space-y-3">
+          <h3 class="font-outfit font-bold text-lg text-neutral-800">📈 Investasi Sewa Bernilai Tinggi</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm">
+            Bagi investor properti luar daerah, membeli rumah tipe 30 atau tipe 36 di Endah Residence II menjanjikan peluang sewa kontrakan yang sangat diminati oleh para pekerja industri dengan yield stabil.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Summary list (Rich snippet triggers) -->
+      <div class="space-y-6 border-t border-neutral-100 pt-12">
+        <h2 class="font-outfit font-black text-2xl text-neutral-900">Pertanyaan Sering Diajukan Tentang Rumah Dekat KITB</h2>
+        <div class="space-y-4">
+          {faqList.map(item => (
+            <div class="bg-neutral-50 p-5 rounded-2xl border border-neutral-200/60 space-y-2">
+              <h3 class="font-outfit font-bold text-neutral-900 text-base">{item.question}</h3>
+              <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed border-t border-neutral-200/50 pt-2">{item.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Action Box -->
+      <div class="bg-brand-emerald-950 text-white rounded-3xl p-8 text-center space-y-6">
+        <h2 class="font-outfit font-extrabold text-2xl">Miliki Hunian Strategis Berinvestasi Emas Sekarang</h2>
+        <p class="text-brand-emerald-200 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          Harga properti terus tumbuh seiring penyerapan tenaga kerja di kawasan industri. Amankan unit idaman Anda dengan promo bunga cicilan flat KPR subsidi atau cicilan khusus hari ini.
+        </p>
+        <a 
+          href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20halaman%20Rumah%20Dekat%20Kawasan%20Industri%20dari%20website%20dan%20tertarik%20dengan%20proyek%20Anda.%20Mohon%20brosurnya." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-outfit font-bold px-8 py-3.5 rounded-xl transition duration-300 shadow shadow-brand-amber-500/20"
+        >
+          Konsultasi Investasi & Survey Lokasi
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>

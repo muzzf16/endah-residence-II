@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import images
+import progressRoad from '../assets/images/progress_road.png';
+import progressHandover from '../assets/images/progress_handover.png';
+import interiorMockup from '../assets/images/interior_mockup.png';
+import tipe30Image from '../assets/images/tipe_30_facade.png';
+
+const title = "Galeri Progres Fisik Pembangunan Real-Time | Endah Residence II";
+const description = "Lihat bukti nyata pembangunan perumahan Endah Residence II Bandar Batang. Galeri serah terima kunci, pengerjaan infrastruktur cor beton, dan penyelesaian unit.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Page Header -->
+  <section class="bg-gradient-to-b from-brand-emerald-50/50 to-white pt-16 pb-12 border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 bg-brand-emerald-100 text-brand-emerald-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+        Transparansi Pembangunan
+      </div>
+      <h1 class="font-outfit font-black text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight">
+        Galeri Progres Pembangunan
+      </h1>
+      <p class="text-neutral-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Kami menghadirkan keterbukaan progres fisik secara nyata di lapangan. Bukti bahwa proyek Endah Residence II aktif berjalan dan berkomitmen menyerahkan unit tepat waktu.
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline Gallery Section -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="space-y-16 relative before:absolute before:inset-0 before:left-4 sm:before:left-1/2 before:w-0.5 before:bg-neutral-200 before:h-full">
+        
+        <!-- Timeline Item 1 -->
+        <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+          <!-- Dot -->
+          <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-brand-emerald-700 border-4 border-white shadow -translate-x-1.5 sm:-translate-x-2 z-10 top-1"></div>
+          
+          <!-- Content Left (Date/Milestone) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 sm:text-right space-y-1">
+            <span class="text-brand-amber-600 text-xs font-bold font-outfit uppercase tracking-wider block">Mei 2026</span>
+            <h3 class="font-outfit font-black text-xl text-neutral-900">Serah Terima Unit Rumah</h3>
+            <p class="text-neutral-500 text-xs sm:text-sm">
+              Kebahagiaan terpancar dari konsumen saat serah terima kunci pertama dilaksanakan menyusul akad KPR yang berjalan sukses.
+            </p>
+          </div>
+          
+          <!-- Content Right (Photo) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 mt-4 sm:mt-0">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-neutral-200/60 aspect-[16/10] bg-white p-2">
+              <Image 
+                src={progressHandover} 
+                alt="Foto serah terima kunci rumah subsidi di Batang kepada pasangan muda" 
+                class="w-full h-full object-cover rounded-xl"
+                sizes="(max-width: 640px) 100vw, 400px"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="relative flex flex-col sm:flex-row-reverse items-start sm:justify-between group">
+          <!-- Dot -->
+          <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-brand-emerald-700 border-4 border-white shadow -translate-x-1.5 sm:-translate-x-2 z-10 top-1"></div>
+          
+          <!-- Content Left (Date/Milestone) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 sm:text-left space-y-1">
+            <span class="text-brand-amber-600 text-xs font-bold font-outfit uppercase tracking-wider block">April 2026</span>
+            <h3 class="font-outfit font-black text-xl text-neutral-900">Pengecoran Jalan Utama</h3>
+            <p class="text-neutral-500 text-xs sm:text-sm">
+              Pengecoran jalan utama sepanjang kawasan perumahan selesai 100% menggunakan beton cor tebal, siap dilewati kendaraan berat.
+            </p>
+          </div>
+          
+          <!-- Content Right (Photo) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 mt-4 sm:mt-0">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-neutral-200/60 aspect-[16/10] bg-white p-2">
+              <Image 
+                src={progressRoad} 
+                alt="Pengecoran jalan perumahan cor beton di Endah Residence Batang" 
+                class="w-full h-full object-cover rounded-xl"
+                sizes="(max-width: 640px) 100vw, 400px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+          <!-- Dot -->
+          <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-brand-emerald-700 border-4 border-white shadow -translate-x-1.5 sm:-translate-x-2 z-10 top-1"></div>
+          
+          <!-- Content Left (Date/Milestone) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 sm:text-right space-y-1">
+            <span class="text-brand-amber-600 text-xs font-bold font-outfit uppercase tracking-wider block">Maret 2026</span>
+            <h3 class="font-outfit font-black text-xl text-neutral-900">Penyelesaian Interior Contoh</h3>
+            <p class="text-neutral-500 text-xs sm:text-sm">
+              Unit contoh diselesaikan di area interior ruang keluarga, menyajikan simulasi penataan furnitur minimalis bagi para calon pembeli yang survey.
+            </p>
+          </div>
+          
+          <!-- Content Right (Photo) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 mt-4 sm:mt-0">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-neutral-200/60 aspect-[16/10] bg-white p-2">
+              <Image 
+                src={interiorMockup} 
+                alt="Foto penataan ruang tamu unit contoh perumahan Batang" 
+                class="w-full h-full object-cover rounded-xl"
+                sizes="(max-width: 640px) 100vw, 400px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="relative flex flex-col sm:flex-row-reverse items-start sm:justify-between group">
+          <!-- Dot -->
+          <div class="absolute left-4 sm:left-1/2 w-4 h-4 rounded-full bg-brand-emerald-700 border-4 border-white shadow -translate-x-1.5 sm:-translate-x-2 z-10 top-1"></div>
+          
+          <!-- Content Left (Date/Milestone) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 sm:text-left space-y-1">
+            <span class="text-brand-amber-600 text-xs font-bold font-outfit uppercase tracking-wider block">Februari 2026</span>
+            <h3 class="font-outfit font-black text-xl text-neutral-900">Finishing Fasad Depan Unit</h3>
+            <p class="text-neutral-500 text-xs sm:text-sm">
+              Pengerjaan fasad depan unit tipe 30 (subsidi) selesai dilakukan, menampilkan konsep dinding warna abu-abu bersih yang rapi dan segar.
+            </p>
+          </div>
+          
+          <!-- Content Right (Photo) -->
+          <div class="w-full sm:w-[45%] pl-10 sm:pl-0 mt-4 sm:mt-0">
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-neutral-200/60 aspect-[16/10] bg-white p-2">
+              <Image 
+                src={tipe30Image} 
+                alt="Penyelesaian fasad depan perumahan subsidi Batang" 
+                class="w-full h-full object-cover rounded-xl"
+                sizes="(max-width: 640px) 100vw, 400px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust Assurance Box -->
+      <div class="mt-24 bg-brand-emerald-950 text-white rounded-3xl p-8 text-center space-y-6 max-w-3xl mx-auto shadow-xl">
+        <h2 class="font-outfit font-extrabold text-2xl">Tertarik Survey Langsung ke Lapangan?</h2>
+        <p class="text-brand-emerald-200 text-xs sm:text-sm leading-relaxed">
+          Jangan ragu untuk melihat langsung kualitas bahan bangunan, struktur jalan cor, dan lingkungan perumahan kami secara gratis didampingi tim sales resmi.
+        </p>
+        <a 
+          href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20melihat%20informasi%20dari%20Website.%20Saya%20tertarik%20untuk%20menjadwalkan%20survey%20lokasi%20langsung%20ke%20perumahan.%20Mohon%20diatur%20jadwalnya." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-outfit font-bold px-8 py-3.5 rounded-xl transition duration-300 shadow-md shadow-brand-amber-500/20 hover:scale-[1.02] active:scale-[0.98] text-sm"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Jadwalkan Survey Lokasi via WA
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>

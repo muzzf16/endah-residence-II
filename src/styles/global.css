@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors - Premium Emerald (Stability, Nature, Trust) */
+  --color-brand-emerald-50: #ecfdf5;
+  --color-brand-emerald-100: #d1fae5;
+  --color-brand-emerald-500: #10b981;
+  --color-brand-emerald-600: #059669;
+  --color-brand-emerald-700: #047857;
+  --color-brand-emerald-800: #065f46;
+  --color-brand-emerald-900: #064e3b;
+  --color-brand-emerald-950: #022c22;
+
+  /* Accent Colors - Warm Amber/Gold (Conversion, Premium feel) */
+  --color-brand-amber-50: #fffbeb;
+  --color-brand-amber-100: #fef3c7;
+  --color-brand-amber-500: #f59e0b;
+  --color-brand-amber-600: #d97706;
+  --color-brand-amber-700: #b45309;
+
+  /* Custom Typography mapping */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-outfit: "Outfit", "Inter", sans-serif;
+}
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #fafafa;
+  color: #171717;
+  overflow-x: hidden;
+}
+
+/* Custom micro-animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.95;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}

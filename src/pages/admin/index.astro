@@ -1,0 +1,1002 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import images for local asset manager listings
+import heroImage from '../../assets/images/hero_estate.png';
+import tipe30Image from '../../assets/images/tipe_30_facade.png';
+import tipe36Image from '../../assets/images/tipe_36_facade.png';
+import progressRoad from '../../assets/images/progress_road.png';
+import progressHandover from '../../assets/images/progress_handover.png';
+import interiorMockup from '../../assets/images/interior_mockup.png';
+
+const title = "Dashboard Pemasaran & SEO Tool | Endah Residence II";
+const description = "Kelola draf halaman, lakukan audit kata kunci SEO lokal secara real-time, dan simulasikan Google SERP desktop serta seluler.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Enforce absolute search engine non-indexation for admin portal -->
+  <meta name="robots" content="noindex, nofollow" slot="head" />
+
+  <div class="min-h-screen bg-neutral-950 text-neutral-100 font-sans pb-16">
+    
+    <!-- Admin Hero Cover -->
+    <div class="bg-gradient-to-r from-neutral-900 via-brand-emerald-950 to-neutral-900 border-b border-neutral-800 py-8 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto flex flex-col xl:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-4 text-center sm:text-left">
+          <div class="w-12 h-12 rounded-2xl bg-brand-emerald-600 flex items-center justify-center shadow-lg shadow-brand-emerald-600/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h1 class="font-outfit font-black text-2xl tracking-tight text-white leading-none">ADMIN CONTROL PANEL</h1>
+            <p class="text-xs text-neutral-400 font-medium mt-1.5">Kelola Artikel • Desain Warna/Background • Optimasi Gambar • SEO Grader</p>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="flex flex-wrap gap-1.5 bg-neutral-900 border border-neutral-800 p-1.5 rounded-2xl">
+          <button id="tab-btn-overview" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300 bg-brand-emerald-800 text-white shadow">
+            Overview
+          </button>
+          <button id="tab-btn-articles" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300 text-neutral-400 hover:text-white">
+            Artikel
+          </button>
+          <button id="tab-btn-seo" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300 text-neutral-400 hover:text-white">
+            SEO Grader
+          </button>
+          <button id="tab-btn-theme" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300 text-neutral-400 hover:text-white">
+            Tema Warna
+          </button>
+          <button id="tab-btn-assets" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300 text-neutral-400 hover:text-white">
+            Gambar/Assets
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Panels Area -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      
+      <!-- 1. OVERVIEW PANEL -->
+      <div id="panel-overview" class="tab-panel space-y-10">
+        
+        <!-- Status Grid Widgets -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 relative overflow-hidden group hover:border-brand-emerald-800/50 transition duration-300">
+            <div class="absolute -inset-4 bg-brand-emerald-500 rounded-full opacity-0 group-hover:opacity-5 blur-2xl transition duration-500"></div>
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-xs font-bold text-neutral-400 block mb-1">TOTAL HALAMAN AKTIF</span>
+                <span class="font-outfit font-black text-4xl text-white block">16 Halaman</span>
+              </div>
+              <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/20">Synced</span>
+            </div>
+            <span class="text-[10px] text-neutral-500 block mt-4">Struktur Silo terorganisir 100% Google-ready.</span>
+          </div>
+
+          <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 relative overflow-hidden group hover:border-brand-emerald-800/50 transition duration-300">
+            <div class="absolute -inset-4 bg-brand-emerald-500 rounded-full opacity-0 group-hover:opacity-5 blur-2xl transition duration-500"></div>
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-xs font-bold text-neutral-400 block mb-1">OPTIMASI KOMPRESI GAMBAR</span>
+                <span class="font-outfit font-black text-4xl text-white block">82% Hemat</span>
+              </div>
+              <span class="bg-amber-500/10 text-brand-amber-500 text-[10px] font-bold px-2 py-0.5 rounded-full border border-brand-amber-500/20">WebP Active</span>
+            </div>
+            <span class="text-[10px] text-neutral-500 block mt-4">Mengurangi LCP seluler hingga di bawah 2.5 detik.</span>
+          </div>
+
+          <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 relative overflow-hidden group hover:border-brand-emerald-800/50 transition duration-300">
+            <div class="absolute -inset-4 bg-brand-emerald-500 rounded-full opacity-0 group-hover:opacity-5 blur-2xl transition duration-500"></div>
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-xs font-bold text-neutral-400 block mb-1">GOOGLE SITEMAP.XML</span>
+                <span class="font-outfit font-black text-4xl text-emerald-400 block">Aktif</span>
+              </div>
+              <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/20">Valid</span>
+            </div>
+            <span class="text-[10px] text-neutral-500 block mt-4">Tersimpan di /sitemap-index.xml otomatis.</span>
+          </div>
+
+          <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 relative overflow-hidden group hover:border-brand-emerald-800/50 transition duration-300">
+            <div class="absolute -inset-4 bg-brand-emerald-500 rounded-full opacity-0 group-hover:opacity-5 blur-2xl transition duration-500"></div>
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-xs font-bold text-neutral-400 block mb-1">NAP LOCAL SEO STATUS</span>
+                <span class="font-outfit font-black text-4xl text-emerald-400 block">Sinkron</span>
+              </div>
+              <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/20">NAP OK</span>
+            </div>
+            <span class="text-[10px] text-neutral-500 block mt-4">Nama, alamat, telp konsisten di seluruh halaman footer.</span>
+          </div>
+        </div>
+
+        <!-- Technical SEO Audit Checklist Card -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 space-y-6">
+          <div class="border-b border-neutral-800 pb-4">
+            <h2 class="font-outfit font-black text-xl text-white">Panduan Verifikasi & Persiapan Sebelum Publikasi</h2>
+            <p class="text-xs text-neutral-400">Pastikan seluruh langkah berikut telah diperiksa sebelum Anda melakukan hosting langsung di Vercel.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                <div>
+                  <span class="font-bold text-white block">Tinjau robots.txt & Sitemap</span>
+                  <span class="text-xs text-neutral-500 block">Pastikan Googlebot diizinkan merayap melalui robots.txt dan URL sitemap mengarah tepat ke domain utama Anda.</span>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                <div>
+                  <span class="font-bold text-white block">Optimasi Tag Alt Gambar</span>
+                  <span class="text-xs text-neutral-500 block">Setiap visual di halaman wajib memiliki deskripsi alt-text yang mengandung kata kunci seperti "rumah murah bandar" atau "KPR subsidi batang".</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                <div>
+                  <span class="font-bold text-white block">Pemeriksaan Tag Heading (H1, H2, H3)</span>
+                  <span class="text-xs text-neutral-500 block">Setiap halaman hanya diperbolehkan memiliki tepat satu H1 sebagai judul inti kaya kata kunci lokasi, diikuti H2 dan H3 secara terstruktur.</span>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                <div>
+                  <span class="font-bold text-white block">Skema Markup JSON-LD Valid</span>
+                  <span class="text-xs text-neutral-500 block">Uji cuplikan schema buatan kita menggunakan Google Rich Results Test guna memverifikasi tidak adanya kesalahan kurung kurawal.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 2. ARTICLES MANAGER PANEL -->
+      <div id="panel-articles" class="tab-panel hidden space-y-8">
+        <div class="flex justify-between items-center border-b border-neutral-800 pb-4">
+          <div>
+            <h2 class="font-outfit font-black text-xl text-white">Artikel & Konten Manager</h2>
+            <p class="text-xs text-neutral-400">Pilih salah satu artikel aktif untuk memuatnya ke editor visual dan mengaudit nilai SEO-nya.</p>
+          </div>
+          <button id="btn-create-new-article" class="bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl uppercase tracking-wider transition">
+            + Buat Artikel Baru
+          </button>
+        </div>
+
+        <div id="articles-list-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Articles list will be dynamically rendered here via script -->
+        </div>
+      </div>
+
+      <!-- 3. SEO GRADER PANEL (Editor & Grader combined) -->
+      <div id="panel-seo" class="tab-panel hidden space-y-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Inputs -->
+          <div class="lg:col-span-7 bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-6">
+            <div class="flex justify-between items-center border-b border-neutral-800 pb-3">
+              <h2 class="font-outfit font-black text-xl text-white">Visual Post Editor & SEO Grader</h2>
+              <span id="editor-editing-badge" class="bg-brand-emerald-800/20 text-brand-emerald-400 border border-brand-emerald-800/30 text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                Mode: Membuat Baru
+              </span>
+            </div>
+            
+            <div class="space-y-4 text-sm">
+              <div class="space-y-1">
+                <label for="seo-input-keyword" class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Kata Kunci Sasaran (Target Keyword) *</label>
+                <input 
+                  type="text" 
+                  id="seo-input-keyword" 
+                  placeholder="Misal: perumahan bandar batang" 
+                  value="perumahan bandar batang"
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 transition"
+                />
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex justify-between items-center">
+                  <label for="seo-input-title" class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Judul Halaman / SEO Title Tag *</label>
+                  <span id="char-count-title" class="text-[10px] text-neutral-500 font-bold">0 Karakter</span>
+                </div>
+                <input 
+                  type="text" 
+                  id="seo-input-title" 
+                  placeholder="Ketik judul SEO yang menarik..." 
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 transition text-sm font-semibold"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="space-y-1">
+                  <label for="seo-input-category" class="text-xs font-bold text-neutral-400 block">Kategori Silo *</label>
+                  <select 
+                    id="seo-input-category" 
+                    class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 transition bg-neutral-950"
+                  >
+                    <option value="kpr">KPR & Keuangan (kpr)</option>
+                    <option value="properti">Kabar Properti (properti)</option>
+                    <option value="investasi">Investasi & Area (investasi)</option>
+                  </select>
+                </div>
+                <div class="space-y-1">
+                  <label for="seo-input-author" class="text-xs font-bold text-neutral-400 block">Penulis Konten</label>
+                  <input 
+                    type="text" 
+                    id="seo-input-author" 
+                    value="Tim Sales Endah Residence II"
+                    class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 transition"
+                  />
+                </div>
+                <div class="space-y-1">
+                  <label for="seo-input-date" class="text-xs font-bold text-neutral-400 block">Tanggal Publikasi</label>
+                  <input 
+                    type="date" 
+                    id="seo-input-date" 
+                    class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 transition bg-neutral-950"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex justify-between items-center">
+                  <label for="seo-input-desc" class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Meta Description / Rangkuman Halaman *</label>
+                  <span id="char-count-desc" class="text-[10px] text-neutral-500 font-bold">0 Karakter</span>
+                </div>
+                <textarea 
+                  id="seo-input-desc" 
+                  rows="2"
+                  placeholder="Tulis ringkasan halaman yang menarik untuk memicu klik..." 
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 transition text-xs sm:text-sm leading-relaxed"
+                ></textarea>
+              </div>
+
+              <div class="space-y-1">
+                <div class="flex justify-between items-center">
+                  <label for="seo-input-body" class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Isi Artikel / Konten (Mendukung Markdown) *</label>
+                  <span id="word-count-body" class="text-[10px] text-neutral-500 font-bold">0 Kata</span>
+                </div>
+                <textarea 
+                  id="seo-input-body" 
+                  rows="8"
+                  placeholder="Ketik atau tempel isi tulisan Anda di sini..." 
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 transition text-xs sm:text-sm leading-relaxed"
+                ></textarea>
+              </div>
+
+              <!-- FAQ Section Builder -->
+              <div class="space-y-3 pt-2">
+                <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Tambahkan Q&A FAQ (Picu Google Rich Snippets)</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input type="text" id="builder-faq-q" placeholder="Pertanyaan..." class="w-full px-4 py-2 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 text-xs" />
+                  <input type="text" id="builder-faq-a" placeholder="Jawaban..." class="w-full px-4 py-2 rounded-xl bg-neutral-950 border border-neutral-800 text-white focus:outline-none focus:border-brand-emerald-600 text-xs" />
+                </div>
+                <button type="button" id="btn-builder-add-faq" class="w-full bg-brand-emerald-900/50 hover:bg-brand-emerald-800 text-emerald-300 font-bold px-4 py-2 rounded-xl text-xs transition border border-brand-emerald-800/30">
+                  + Tambahkan FAQ ke Artikel
+                </button>
+                <div id="builder-faq-container" class="space-y-2 text-xs">
+                  <!-- Dynamic FAQ Lists -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Live Grades & Preview & Compiled Code -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Dynamic Grading Gauge -->
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 text-center space-y-4">
+              <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Hasil Skor Audit SEO</span>
+              <div class="relative w-28 h-28 mx-auto flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full border-8 border-neutral-800"></div>
+                <div id="seo-score-glow" class="absolute inset-1 rounded-full border-8 border-brand-emerald-600 shadow-lg shadow-brand-emerald-500/20 transition-all duration-300"></div>
+                <span id="seo-score-text" class="font-outfit font-black text-4xl text-white relative z-10">0</span>
+              </div>
+              <span id="seo-score-grade" class="font-outfit font-bold text-sm text-brand-emerald-500 block uppercase">SEO Sangat Optimal</span>
+            </div>
+
+            <!-- Google Search SERP Simulator -->
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-5 space-y-4">
+              <div class="flex justify-between items-center border-b border-neutral-800 pb-2">
+                <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Google SERP Simulator</span>
+                <div class="flex bg-neutral-950 border border-neutral-800 p-0.5 rounded-lg text-[9px] font-bold uppercase">
+                  <button id="btn-serp-mobile" class="px-2 py-0.5 rounded bg-brand-emerald-800 text-white">Mobile</button>
+                  <button id="btn-serp-desktop" class="px-2 py-0.5 rounded text-neutral-500 hover:text-white">Desktop</button>
+                </div>
+              </div>
+              <div id="serp-preview-box" class="bg-white text-neutral-900 p-4 rounded-xl border border-neutral-200/80 space-y-1 font-sans text-left max-w-sm sm:max-w-md mx-auto transition-all duration-300">
+                <div class="flex items-center gap-2 text-xs text-neutral-500">
+                  <div class="w-6 h-6 rounded-full bg-neutral-100 flex items-center justify-center shrink-0">
+                    <span class="font-extrabold text-[10px] text-brand-emerald-800">ER</span>
+                  </div>
+                  <div class="flex flex-col leading-none">
+                    <span class="text-neutral-800 font-semibold text-[11px] block">Endah Residence II</span>
+                    <span id="serp-preview-url" class="text-[10px] text-neutral-500 block">https://endahresidence.com > blog > kpr</span>
+                  </div>
+                </div>
+                <h3 id="serp-preview-title" class="text-[#1a0dab] hover:underline cursor-pointer font-medium text-base leading-snug truncate">Judul Halaman</h3>
+                <p id="serp-preview-desc" class="text-[#4d5156] text-[11px] leading-relaxed line-clamp-2">Deskripsi meta.</p>
+              </div>
+            </div>
+
+            <!-- Exported Markdown Code Block -->
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-5 space-y-4">
+              <div class="flex justify-between items-center border-b border-neutral-800 pb-2">
+                <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Hasil Kode File Markdown (.md)</span>
+                <button id="btn-copy-code" class="bg-neutral-950 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 px-3 py-1 rounded-lg text-[9px] font-bold uppercase transition">
+                  Copy Code
+                </button>
+              </div>
+              <pre class="bg-neutral-950 border border-neutral-800 p-4 rounded-xl text-[10px] font-mono text-neutral-400 overflow-x-auto select-all max-h-[300px] leading-normal whitespace-pre-wrap"><code id="code-output-box"></code></pre>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 4. THEME DESIGNER PANEL -->
+      <div id="panel-theme" class="tab-panel hidden space-y-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls Panel Left -->
+          <div class="lg:col-span-6 bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-6">
+            <div>
+              <h2 class="font-outfit font-black text-xl text-white">Desainer Warna & Background</h2>
+              <p class="text-xs text-neutral-400 mt-1">Ubah palet warna website utama secara visual dan pratinjau hasilnya secara real-time.</p>
+            </div>
+
+            <div class="space-y-6 text-sm">
+              
+              <!-- Brand Primary Emerald Picker -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <label class="font-bold text-neutral-300 block">1. Warna Utama Brand (Primary color)</label>
+                  <span id="hex-label-primary" class="text-xs font-mono font-bold text-neutral-500">#064e3b</span>
+                </div>
+                <div class="flex gap-4 items-center">
+                  <input type="color" id="theme-color-primary" value="#064e3b" class="w-14 h-14 rounded-xl border border-neutral-800 cursor-pointer bg-transparent" />
+                  <div class="text-xs text-neutral-500">
+                    Merepresentasikan kredibilitas, alam, dan kestabilan. Digunakan pada navbar, tombol utama, dan heading utama.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Brand Accent Amber Picker -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <label class="font-bold text-neutral-300 block">2. Warna Aksen Aksi (Accent color)</label>
+                  <span id="hex-label-accent" class="text-xs font-mono font-bold text-neutral-500">#d97706</span>
+                </div>
+                <div class="flex gap-4 items-center">
+                  <input type="color" id="theme-color-accent" value="#d97706" class="w-14 h-14 rounded-xl border border-neutral-800 cursor-pointer bg-transparent" />
+                  <div class="text-xs text-neutral-500">
+                    Berfungsi untuk menarik mata ke area konversi utama. Digunakan untuk lencana promo, tombol WhatsApp, dan sorotan harga.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body Background Picker -->
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <label class="font-bold text-neutral-300 block">3. Warna Background Situs (Background color)</label>
+                  <span id="hex-label-bg" class="text-xs font-mono font-bold text-neutral-500">#fafafa</span>
+                </div>
+                <div class="flex gap-4 items-center">
+                  <input type="color" id="theme-color-bg" value="#fafafa" class="w-14 h-14 rounded-xl border border-neutral-800 cursor-pointer bg-transparent" />
+                  <div class="text-xs text-neutral-500">
+                    Warna dasar latar belakang halaman komersil Anda. Disarankan menggunakan warna terang yang bersih untuk keterbacaan artikel.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Live Preview Frame right -->
+          <div class="lg:col-span-6 space-y-6">
+            
+            <!-- Live Preview card container -->
+            <div id="theme-preview-card-bg" class="bg-[#fafafa] rounded-3xl p-6 border border-neutral-200 text-neutral-900 transition-all duration-300">
+              <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest block mb-4 border-b border-neutral-200/80 pb-2">Live Page Preview Mockup</span>
+              
+              <!-- Card visual elements -->
+              <div class="bg-white rounded-2xl shadow border border-neutral-100 overflow-hidden max-w-sm mx-auto">
+                <div class="relative h-44 bg-neutral-200 flex items-center justify-center text-xs text-neutral-400">
+                  Visual Rumah Mockup
+                  <div id="theme-preview-badge" class="absolute top-3 left-3 bg-[#064e3b] text-white text-[9px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                    PROMO TERBATAS
+                  </div>
+                </div>
+                <div class="p-5 space-y-3 text-left">
+                  <h4 id="theme-preview-title" class="font-outfit font-black text-lg text-[#064e3b]">Tipe 30 / 60 Subsidi Cerdas</h4>
+                  <p class="text-neutral-500 text-xs leading-relaxed">Pilihan tepat bagi pasangan muda. Dinding bata plester aci, air sumur artesis lancar dan sejuk.</p>
+                  
+                  <div class="flex justify-between items-center border-t border-neutral-100 pt-3">
+                    <span class="text-xs font-semibold text-neutral-400">Harga Mulai</span>
+                    <span id="theme-preview-price" class="text-sm font-extrabold text-[#d97706]">Rp 166 Juta-an</span>
+                  </div>
+                  
+                  <button id="theme-preview-btn" class="w-full bg-[#064e3b] text-white font-outfit font-bold py-2.5 rounded-xl text-xs hover:opacity-90 transition">
+                    Tanya Cicilan Flat KPR
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Compiled Tailwind v4 Theme config block -->
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 space-y-4">
+              <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Tailwind CSS v4 `@theme` Code</span>
+              <pre class="bg-neutral-950 border border-neutral-800 p-4 rounded-xl text-[10px] font-mono text-neutral-400 overflow-x-auto select-all leading-normal whitespace-pre-wrap"><code id="compiled-theme-css-box"></code></pre>
+              <span class="text-[10px] text-neutral-500 block leading-normal">
+                <strong>Tip Penerapan:</strong> Tempelkan kode CSS `@theme` di atas ke dalam baris 3-17 pada berkas `src/styles/global.css` di editor kode Anda untuk merubah warna tema seluruh website secara instan!
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 5. ASSET & IMAGES MANAGER PANEL -->
+      <div id="panel-assets" class="tab-panel hidden space-y-10">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-6">
+          <div>
+            <h2 class="font-outfit font-black text-xl text-white">Visual Asset & Image Manager</h2>
+            <p class="text-xs text-neutral-400 mt-1">Pantau, optimalkan, dan kelola 6 berkas gambar utama website Endah Residence II untuk menjamin performa SEO maksimal.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Asset 1 -->
+            <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-4 space-y-4">
+              <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-900">
+                <Image src={heroImage} alt="Hero estate asset manager thumbnail" class="w-full h-full object-cover" sizes="300px" loading="lazy" />
+              </div>
+              <div class="text-xs space-y-1.5">
+                <span class="font-bold text-white block text-sm">hero_estate.png</span>
+                <div class="flex justify-between text-neutral-400"><span>Lokasi Berkas</span><span class="font-mono text-[10px]">/src/assets/images/</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Size WebP</span><span class="font-bold text-emerald-400">183 kB (82% Saving)</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Alt Tag SEO</span><span class="italic">"Perumahan Endah Residence II..."</span></div>
+              </div>
+            </div>
+
+            <!-- Asset 2 -->
+            <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-4 space-y-4">
+              <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-900">
+                <Image src={tipe30Image} alt="Tipe 30 facade asset manager thumbnail" class="w-full h-full object-cover" sizes="300px" loading="lazy" />
+              </div>
+              <div class="text-xs space-y-1.5">
+                <span class="font-bold text-white block text-sm">tipe_30_facade.png</span>
+                <div class="flex justify-between text-neutral-400"><span>Lokasi Berkas</span><span class="font-mono text-[10px]">/src/assets/images/</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Size WebP</span><span class="font-bold text-emerald-400">126 kB (84% Saving)</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Alt Tag SEO</span><span class="italic">"Fasad depan rumah subsidi Tipe 30..."</span></div>
+              </div>
+            </div>
+
+            <!-- Asset 3 -->
+            <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-4 space-y-4">
+              <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-900">
+                <Image src={tipe36Image} alt="Tipe 36 facade asset manager thumbnail" class="w-full h-full object-cover" sizes="300px" loading="lazy" />
+              </div>
+              <div class="text-xs space-y-1.5">
+                <span class="font-bold text-white block text-sm">tipe_36_facade.png</span>
+                <div class="flex justify-between text-neutral-400"><span>Lokasi Berkas</span><span class="font-mono text-[10px]">/src/assets/images/</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Size WebP</span><span class="font-bold text-emerald-400">191 kB (80% Saving)</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Alt Tag SEO</span><span class="italic">"Fasad depan rumah komersil premium..."</span></div>
+              </div>
+            </div>
+
+            <!-- Asset 4 -->
+            <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-4 space-y-4">
+              <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-900">
+                <Image src={progressRoad} alt="Progress road asset manager thumbnail" class="w-full h-full object-cover" sizes="300px" loading="lazy" />
+              </div>
+              <div class="text-xs space-y-1.5">
+                <span class="font-bold text-white block text-sm">progress_road.png</span>
+                <div class="flex justify-between text-neutral-400"><span>Lokasi Berkas</span><span class="font-mono text-[10px]">/src/assets/images/</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Size WebP</span><span class="font-bold text-emerald-400">233 kB (80% Saving)</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Alt Tag SEO</span><span class="italic">"Jalan utama cor beton 100 persen..."</span></div>
+              </div>
+            </div>
+
+            <!-- Asset 5 -->
+            <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-4 space-y-4">
+              <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-900">
+                <Image src={progressHandover} alt="Progress handover asset manager thumbnail" class="w-full h-full object-cover" sizes="300px" loading="lazy" />
+              </div>
+              <div class="text-xs space-y-1.5">
+                <span class="font-bold text-white block text-sm">progress_handover.png</span>
+                <div class="flex justify-between text-neutral-400"><span>Lokasi Berkas</span><span class="font-mono text-[10px]">/src/assets/images/</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Size WebP</span><span class="font-bold text-emerald-400">133 kB (84% Saving)</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Alt Tag SEO</span><span class="italic">"Foto serah terima kunci rumah subsidi..."</span></div>
+              </div>
+            </div>
+
+            <!-- Asset 6 -->
+            <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-4 space-y-4">
+              <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-900">
+                <Image src={interiorMockup} alt="Interior mockup asset manager thumbnail" class="w-full h-full object-cover" sizes="300px" loading="lazy" />
+              </div>
+              <div class="text-xs space-y-1.5">
+                <span class="font-bold text-white block text-sm">interior_mockup.png</span>
+                <div class="flex justify-between text-neutral-400"><span>Lokasi Berkas</span><span class="font-mono text-[10px]">/src/assets/images/</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Size WebP</span><span class="font-bold text-emerald-400">160 kB (82% Saving)</span></div>
+                <div class="flex justify-between text-neutral-400"><span>Alt Tag SEO</span><span class="italic">"Desain interior minimalis modern..."</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Guidelines Box -->
+          <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-5 text-xs text-neutral-400 space-y-2 leading-relaxed">
+            <span class="font-bold text-white block">💡 Panduan Mengganti Gambar Website:</span>
+            <p>Untuk merubah gambar banner hero, fasad depan tipe unit, atau foto progres fisik di seluruh website, Anda cukup menindih berkas gambar asli dengan berkas baru yang Anda miliki menggunakan nama berkas dan ekstensi yang **sama persis** di folder `/src/assets/images/`.</p>
+            <p>Astro compiler secara otomatis akan mengonversi, mengubah resolusi agar ramah seluler, dan mengompresi berkas baru Anda ke format **WebP super ringan** selama proses build kompilasi produksi dijalankan.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Client-Side Dashboard and Custozimer JavaScripts -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. DYNAMIC NAVIGATION TABS
+      const tabPanels = {
+        overview: document.getElementById('panel-overview'),
+        articles: document.getElementById('panel-articles'),
+        seo: document.getElementById('panel-seo'),
+        theme: document.getElementById('panel-theme'),
+        assets: document.getElementById('panel-assets')
+      };
+
+      const tabButtons = {
+        overview: document.getElementById('tab-btn-overview'),
+        articles: document.getElementById('tab-btn-articles'),
+        seo: document.getElementById('tab-btn-seo'),
+        theme: document.getElementById('tab-btn-theme'),
+        assets: document.getElementById('tab-btn-assets')
+      };
+
+      function activateTab(tabId) {
+        Object.keys(tabPanels).forEach(key => {
+          if (key === tabId) {
+            tabPanels[key].classList.remove('hidden');
+            tabButtons[key].className = "tab-btn px-4 py-2 rounded-xl text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300 bg-brand-emerald-800 text-white shadow";
+          } else {
+            tabPanels[key].classList.add('hidden');
+            tabButtons[key].className = "tab-btn px-4 py-2 rounded-xl text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-300 text-neutral-400 hover:text-white";
+          }
+        });
+      }
+
+      Object.keys(tabButtons).forEach(key => {
+        tabButtons[key].addEventListener('click', () => activateTab(key));
+      });
+
+
+      // 2. MOCKED ARTICLES LOCAL DATABASE
+      const mockArticles = [
+        {
+          id: "syarat-kpr-subsidi-batang",
+          title: "Syarat Lengkap KPR Rumah Subsidi di Batang Terbaru 2026",
+          description: "Panduan lengkap syarat KPR rumah subsidi di Kabupaten Batang. Ketahui batasan gaji, dokumen penting, dan tips lolos BI checking KPR BTN Syariah mudah.",
+          category: "kpr",
+          author: "Tim Sales Endah Residence II",
+          date: "2026-05-27",
+          keyword: "KPR subsidi",
+          body: `Memiliki rumah pribadi di usia muda kini bukan lagi sekadar impian. Pemerintah Indonesia terus menyelenggarakan program FLPP atau KPR Subsidi untuk membantu masyarakat berpenghasilan rendah mendapatkan hunian pertamanya.\n\nJika Anda berencana mengambil rumah subsidi di Kabupaten Batang—khususnya di Endah Residence II Bandar—maka sangat penting bagi Anda untuk memahami syarat dan dokumen administratif yang diperlukan agar pengajuan KPR Anda disetujui 100% oleh perbankan.`,
+          faq: [
+            { q: "Berapa batas maksimal penghasilan untuk KPR subsidi di Batang?", a: "Batas penghasilan pokok maksimal untuk mengajukan KPR subsidi (FLPP) adalah Rp 8.000.000 per bulan." },
+            { q: "Apakah bisa mengajukan KPR subsidi jika memiliki cicilan motor?", a: "Bisa, asalkan rasio hutang bulanan Anda (DSR) masih di bawah 30-40% dari total penghasilan bersih." }
+          ]
+        },
+        {
+          id: "tips-beli-rumah-pertama-batang",
+          title: "5 Tips Cerdas Membeli Rumah Pertama di Bandar Batang",
+          description: "Panduan lengkap tips membeli rumah pertama di Bandar, Batang bagi pemula. Pelajari cara survei lokasi, cek legalitas SHM, dan menentukan budget cicilan ideal.",
+          category: "properti",
+          author: "Tim Sales Endah Residence II",
+          date: "2026-05-27",
+          keyword: "rumah pertama",
+          body: `Membeli rumah pertama adalah salah satu keputusan keuangan terbesar dalam hidup Anda. Bagi sebagian orang, proses mencari rumah di daerah berkembang seperti Kabupaten Batang bisa terasa membingungkan karena banyaknya tawaran dari berbagai developer.\n\nDaerah Bandar, Batang kini menjadi primadona baru bagi para pencari rumah karena lokasinya yang asri di dataran tinggi namun dekat dengan jalan tol dan zona industri.`,
+          faq: [
+            { q: "Berapa booking fee rata-rata perumahan di Bandar Batang?", a: "Booking fee untuk perumahan di area Bandar berkisar antara Rp 1.000.000 hingga Rp 2.000.000." },
+            { q: "Bagaimana cara memeriksa legalitas tanah perumahan?", a: "Anda wajib menanyakan kepemilikan sertifikat induk (SHM) dan izin PBG/IMB kepada pihak developer." }
+          ]
+        },
+        {
+          id: "perkembangan-kawasan-industri-batang",
+          title: "Dampak KITB terhadap Tren Investasi Properti di Bandar Batang",
+          description: "Analisis lengkap dampak Kawasan Industri Terpadu Batang (KITB) terhadap naiknya nilai investasi properti dan hunian sewa di area Bandar Batang.",
+          category: "investasi",
+          author: "Tim Pemasaran Resmi Endah Residence II",
+          date: "2026-05-27",
+          keyword: "KIT Batang",
+          body: `Proyek Strategis Nasional Kawasan Industri Terpadu Batang (KITB) atau Grand Batang City yang membentang seluas ribuan hektar kini telah resmi beroperasi. Masuknya investasi raksasa asing secara drastis mengubah peta ekonomi Jawa Tengah.\n\nDampak dari pertumbuhan ekonomi KITB ini tidak hanya dirasakan di area pesisir Batang saja, melainkan meluas pesat hingga ke wilayah Bandar, Batang.`,
+          faq: [
+            { q: "Berapa jarak dari Bandar Batang menuju Kawasan Industri Terpadu Batang (KITB)?", a: "Jaraknya sangat dekat, hanya sekitar 20 menit berkendara melalui rute komuter Bandar-Tulis." }
+          ]
+        }
+      ];
+
+      const articlesListContainer = document.getElementById('articles-list-container');
+      const editorEditingBadge = document.getElementById('editor-editing-badge');
+
+      function renderArticlesList() {
+        articlesListContainer.innerHTML = '';
+        mockArticles.forEach((art) => {
+          const card = document.createElement('div');
+          card.className = "bg-neutral-900 border border-neutral-800 rounded-3xl p-5 flex flex-col justify-between space-y-4 hover:border-brand-emerald-800/35 transition";
+          card.innerHTML = `
+            <div class="space-y-2">
+              <span class="text-[9px] bg-neutral-950 border border-neutral-800 text-neutral-400 font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                ${art.category.toUpperCase()}
+              </span>
+              <h3 class="font-outfit font-bold text-lg text-white line-clamp-2">${art.title}</h3>
+              <p class="text-xs text-neutral-500 line-clamp-3 leading-normal">${art.description}</p>
+            </div>
+            <div class="flex justify-between items-center border-t border-neutral-800 pt-3 text-xs font-bold">
+              <span class="text-[10px] text-neutral-500">${art.date}</span>
+              <button class="bg-brand-emerald-900/30 hover:bg-brand-emerald-800 text-emerald-400 hover:text-white px-3.5 py-1.5 rounded-xl border border-brand-emerald-800/30 transition">
+                Muat & Edit
+              </button>
+            </div>
+          `;
+          card.querySelector('button').addEventListener('click', () => {
+            loadArticleToEditor(art);
+          });
+          articlesListContainer.appendChild(card);
+        });
+      }
+
+      // Initial render
+      renderArticlesList();
+
+      document.getElementById('btn-create-new-article').addEventListener('click', () => {
+        // Reset form to write new
+        document.getElementById('seo-input-keyword').value = '';
+        document.getElementById('seo-input-title').value = '';
+        document.getElementById('seo-input-desc').value = '';
+        document.getElementById('seo-input-body').value = '';
+        document.getElementById('seo-input-category').value = 'kpr';
+        document.getElementById('seo-input-author').value = 'Tim Sales Endah Residence II';
+        document.getElementById('seo-input-date').value = new Date().toISOString().split('T')[0];
+        editorFaqs.length = 0;
+        renderEditorFAQs();
+        editorEditingBadge.className = "bg-brand-emerald-800/20 text-brand-emerald-400 border border-brand-emerald-800/30 text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider";
+        editorEditingBadge.textContent = "Mode: Membuat Baru";
+        activateTab('seo');
+        calculateSEOScore();
+        compileMarkdown();
+      });
+
+
+      // 3. EDIT & AUDIT ENGINE
+      const keywordInput = document.getElementById('seo-input-keyword');
+      const titleInput = document.getElementById('seo-input-title');
+      const descInput = document.getElementById('seo-input-desc');
+      const bodyInput = document.getElementById('seo-input-body');
+      const categoryInput = document.getElementById('seo-input-category');
+      const authorInput = document.getElementById('seo-input-author');
+      const dateInput = document.getElementById('seo-input-date');
+
+      // Count holders
+      const titleCountText = document.getElementById('char-count-title');
+      const descCountText = document.getElementById('char-count-desc');
+      const bodyCountText = document.getElementById('word-count-body');
+
+      // Circular gauge score
+      const scoreRing = document.getElementById('seo-score-glow');
+      const scoreText = document.getElementById('seo-score-text');
+      const scoreGrade = document.getElementById('seo-score-grade');
+
+      // SERP Mockups
+      const serpTitle = document.getElementById('serp-preview-title');
+      const serpDesc = document.getElementById('serp-preview-desc');
+      const serpUrl = document.getElementById('serp-preview-url');
+      const serpMobileBtn = document.getElementById('btn-serp-mobile');
+      const serpDesktopBtn = document.getElementById('btn-serp-desktop');
+      const serpBox = document.getElementById('serp-preview-box');
+
+      // Checklist elements
+      const checks = {
+        titleLen: document.getElementById('check-title-len'),
+        descLen: document.getElementById('check-desc-len'),
+        keywordTitle: document.getElementById('check-keyword-title'),
+        keywordDesc: document.getElementById('check-keyword-desc'),
+        keywordBody: document.getElementById('check-keyword-body')
+      };
+
+      const codeOutput = document.getElementById('code-output-box');
+      const copyBtn = document.getElementById('btn-copy-code');
+
+      const editorFaqs = [];
+
+      function loadArticleToEditor(art) {
+        keywordInput.value = art.keyword;
+        titleInput.value = art.title;
+        descInput.value = art.description;
+        bodyInput.value = art.body;
+        categoryInput.value = art.category;
+        authorInput.value = art.author;
+        dateInput.value = art.date;
+
+        editorFaqs.length = 0;
+        art.faq.forEach(f => editorFaqs.push(f));
+        
+        renderEditorFAQs();
+
+        editorEditingBadge.className = "bg-amber-500/20 text-brand-amber-500 border border-brand-amber-500/30 text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider";
+        editorEditingBadge.textContent = `Mode: Mengedit ${art.id}.md`;
+
+        activateTab('seo');
+        calculateSEOScore();
+        compileMarkdown();
+      }
+
+      function calculateSEOScore() {
+        const keyword = keywordInput.value.trim().toLowerCase();
+        const title = titleInput.value.trim();
+        const desc = descInput.value.trim();
+        const body = bodyInput.value.trim();
+        const category = categoryInput.value;
+
+        // 1. Form counters
+        titleCountText.textContent = `${title.length} Karakter`;
+        descCountText.textContent = `${desc.length} Karakter`;
+        const words = body ? body.split(/\s+/).filter(Boolean).length : 0;
+        bodyCountText.textContent = `${words} Kata`;
+
+        // 2. Score metrics calculations
+        let score = 0;
+
+        const isTitleLenValid = title.length >= 45 && title.length <= 65;
+        setCheckState(checks.titleLen, isTitleLenValid);
+        if (isTitleLenValid) score += 20;
+
+        const isDescLenValid = desc.length >= 110 && desc.length <= 170;
+        setCheckState(checks.descLen, isDescLenValid);
+        if (isDescLenValid) score += 20;
+
+        const isKeywordInTitle = keyword && title.toLowerCase().includes(keyword);
+        setCheckState(checks.keywordTitle, isKeywordInTitle);
+        if (isKeywordInTitle) score += 20;
+
+        const isKeywordInDesc = keyword && desc.toLowerCase().includes(keyword);
+        setCheckState(checks.keywordDesc, isKeywordInDesc);
+        if (isKeywordInDesc) score += 20;
+
+        let density = 0;
+        if (keyword && words > 0) {
+          const occurrences = (body.toLowerCase().match(new RegExp(escapeRegex(keyword), 'g')) || []).length;
+          density = (occurrences / words) * 100;
+        }
+        const isKeywordBodyValid = density >= 0.5 && density <= 3.0;
+        setCheckState(checks.keywordBody, isKeywordBodyValid);
+        if (isKeywordBodyValid) score += 20;
+
+        // Update radial progress indicator
+        scoreText.textContent = score;
+
+        if (score < 50) {
+          scoreRing.className = "absolute inset-1 rounded-full border-8 border-red-600 shadow-lg shadow-red-500/20 transition-all duration-300";
+          scoreGrade.textContent = "Butuh Optimasi";
+          scoreGrade.className = "font-outfit font-bold text-sm text-red-500 block uppercase";
+        } else if (score < 80) {
+          scoreRing.className = "absolute inset-1 rounded-full border-8 border-amber-500 shadow-lg shadow-amber-500/20 transition-all duration-300";
+          scoreGrade.textContent = "Cukup Baik";
+          scoreGrade.className = "font-outfit font-bold text-sm text-amber-500 block uppercase";
+        } else {
+          scoreRing.className = "absolute inset-1 rounded-full border-8 border-emerald-600 shadow-lg shadow-emerald-500/20 transition-all duration-300";
+          scoreGrade.textContent = "SEO Sangat Optimal";
+          scoreGrade.className = "font-outfit font-bold text-sm text-emerald-500 block uppercase";
+        }
+
+        // 3. Highlight keyword occurrences in Google simulator
+        let highlightedTitle = title || "Ketik Judul SEO Halaman";
+        let highlightedDesc = desc || "Ketik deskripsi meta halaman Anda...";
+        
+        if (keyword) {
+          const regex = new RegExp(`(${escapeRegex(keyword)})`, 'gi');
+          highlightedTitle = highlightedTitle.replace(regex, '<strong>$1</strong>');
+          highlightedDesc = highlightedDesc.replace(regex, '<strong>$1</strong>');
+        }
+
+        serpTitle.innerHTML = highlightedTitle;
+        serpDesc.innerHTML = highlightedDesc;
+        serpUrl.textContent = `https://endahresidence.com > blog > ${category}`;
+      }
+
+      function setCheckState(elem, isValid) {
+        if (isValid) {
+          elem.className = "w-4 h-4 rounded-full flex items-center justify-center text-[9px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0";
+          elem.textContent = "✓";
+        } else {
+          elem.className = "w-4 h-4 rounded-full flex items-center justify-center text-[9px] font-bold bg-red-500/10 text-red-400 border border-red-500/20 shrink-0";
+          elem.textContent = "✗";
+        }
+      }
+
+      function escapeRegex(string) {
+        return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      }
+
+      function renderEditorFAQs() {
+        const builderFaqContainer = document.getElementById('builder-faq-container');
+        builderFaqContainer.innerHTML = '';
+        editorFaqs.forEach((item, idx) => {
+          const div = document.createElement('div');
+          div.className = "flex justify-between items-center bg-neutral-950 p-2 rounded-xl border border-neutral-800 gap-4";
+          div.innerHTML = `
+            <div class="truncate">
+              <span class="font-bold text-neutral-300 block">Q: ${item.q}</span>
+              <span class="text-neutral-500 block truncate">A: ${item.a}</span>
+            </div>
+            <button type="button" class="text-red-500 hover:text-red-400 font-bold shrink-0 text-[10px] uppercase">Hapus</button>
+          `;
+          div.querySelector('button').addEventListener('click', () => {
+            editorFaqs.splice(idx, 1);
+            renderEditorFAQs();
+            compileMarkdown();
+          });
+          builderFaqContainer.appendChild(div);
+        });
+      }
+
+      document.getElementById('btn-builder-add-faq').addEventListener('click', () => {
+        const q = document.getElementById('builder-faq-q').value.trim();
+        const a = document.getElementById('builder-faq-a').value.trim();
+        if (q && a) {
+          editorFaqs.push({ q, a });
+          document.getElementById('builder-faq-q').value = '';
+          document.getElementById('builder-faq-a').value = '';
+          renderEditorFAQs();
+          compileMarkdown();
+        }
+      });
+
+      function compileMarkdown() {
+        const title = titleInput.value.trim() || "Judul Draf Artikel";
+        const category = categoryInput.value;
+        const author = authorInput.value.trim() || "Tim Sales Endah Residence II";
+        const desc = descInput.value.trim() || "Deskripsi meta halaman draf...";
+        const body = bodyInput.value.trim() || "Isi artikel...";
+        const date = dateInput.value || new Date().toISOString().split('T')[0];
+
+        let md = `---
+title: "${title}"
+description: "${desc}"
+publishDate: "${date}"
+category: "${category}"
+tags: ["Endah Residence II", "Rumah Baru", "Batang"]
+image: "/src/assets/images/hero_estate.png"
+author: "${author}"`;
+
+        if (editorFaqs.length > 0) {
+          md += `\nfaq:`;
+          editorFaqs.forEach(item => {
+            md += `\n  - question: "${item.q}"\n    answer: "${item.a}"`;
+          });
+        }
+
+        md += `\n---\n\n${body}`;
+        codeOutput.textContent = md;
+      }
+
+      [keywordInput, titleInput, descInput, bodyInput, categoryInput, authorInput, dateInput].forEach(elem => {
+        elem.addEventListener('input', () => {
+          calculateSEOScore();
+          compileMarkdown();
+        });
+      });
+
+      // Google SERP Viewports switch
+      serpMobileBtn.addEventListener('click', () => {
+        serpMobileBtn.className = "px-2 py-0.5 rounded bg-brand-emerald-800 text-white";
+        serpDesktopBtn.className = "px-2 py-0.5 rounded text-neutral-500 hover:text-white";
+        serpBox.className = "bg-white text-neutral-900 p-4 rounded-xl border border-neutral-200/80 space-y-1 font-sans text-left max-w-sm sm:max-w-md mx-auto transition-all duration-300";
+      });
+
+      serpDesktopBtn.addEventListener('click', () => {
+        serpDesktopBtn.className = "px-2 py-0.5 rounded bg-brand-emerald-800 text-white";
+        serpMobileBtn.className = "px-2 py-0.5 rounded text-neutral-500 hover:text-white";
+        serpBox.className = "bg-white text-neutral-900 p-4 rounded-xl border border-neutral-200/80 space-y-1 font-sans text-left w-full max-w-none mx-0 transition-all duration-300";
+      });
+
+      copyBtn.addEventListener('click', () => {
+        const range = document.createRange();
+        range.selectNode(codeOutput);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+
+        const origText = copyBtn.textContent;
+        copyBtn.textContent = "COPIED!";
+        copyBtn.className = "bg-brand-emerald-800 text-white px-3 py-1 rounded-lg text-[9px] font-bold uppercase transition";
+        setTimeout(() => {
+          copyBtn.textContent = origText;
+          copyBtn.className = "bg-neutral-950 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 px-3 py-1 rounded-lg text-[9px] font-bold uppercase transition";
+        }, 1500);
+      });
+
+      // Default date to today
+      dateInput.value = new Date().toISOString().split('T')[0];
+
+      // Set initial defaults
+      calculateSEOScore();
+      compileMarkdown();
+
+
+      // 4. THEME & COLORS DESIGNER ENGINE
+      const pickerPrimary = document.getElementById('theme-color-primary');
+      const pickerAccent = document.getElementById('theme-color-accent');
+      const pickerBg = document.getElementById('theme-color-bg');
+
+      const hexLabelPrimary = document.getElementById('hex-label-primary');
+      const hexLabelAccent = document.getElementById('hex-label-accent');
+      const hexLabelBg = document.getElementById('hex-label-bg');
+
+      const previewBg = document.getElementById('theme-preview-card-bg');
+      const previewBadge = document.getElementById('theme-preview-badge');
+      const previewTitle = document.getElementById('theme-preview-title');
+      const previewPrice = document.getElementById('theme-preview-price');
+      const previewBtn = document.getElementById('theme-preview-btn');
+
+      const cssOutputBox = document.getElementById('compiled-theme-css-box');
+
+      function updateThemeCustomizations() {
+        const primaryHex = pickerPrimary.value;
+        const accentHex = pickerAccent.value;
+        const bgHex = pickerBg.value;
+
+        // Update hex labels
+        hexLabelPrimary.textContent = primaryHex;
+        hexLabelAccent.textContent = accentHex;
+        hexLabelBg.textContent = bgHex;
+
+        // Apply style rules dynamically to Live Preview Card
+        previewBg.style.backgroundColor = bgHex;
+        previewBadge.style.backgroundColor = primaryHex;
+        previewTitle.style.color = primaryHex;
+        previewPrice.style.color = accentHex;
+        previewBtn.style.backgroundColor = primaryHex;
+
+        // Compile Tailwind CSS v4 directives code block
+        const compiledCss = `@theme {
+  /* Brand Colors - Custom Primary (Stability, Nature, Trust) */
+  --color-brand-emerald-900: ${primaryHex};
+
+  /* Accent Colors - Custom Accent (Conversion, Premium highlights) */
+  --color-brand-amber-600: ${accentHex};
+
+  /* Custom Page Background Color */
+  --color-neutral-50: ${bgHex};
+}`;
+        cssOutputBox.textContent = compiledCss;
+      }
+
+      [pickerPrimary, pickerAccent, pickerBg].forEach(picker => {
+        picker.addEventListener('input', updateThemeCustomizations);
+      });
+
+      // Run theme initialization
+      updateThemeCustomizations();
+
+    });
+  </script>
+</Layout>

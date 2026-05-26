@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+// Import local image as a decoration backdrop
+import heroImage from '../assets/images/hero_estate.png';
+
+const title = "Tentang Pengembang Developer Terpercaya | Endah Residence II";
+const description = "Mengenal pengembang perumahan Endah Residence II Bandar Batang. Berkomitmen menghadirkan hunian legalitas aman SHM ready dan PBG lengkap resmi.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Page Header -->
+  <section class="bg-gradient-to-b from-brand-emerald-50/50 to-white pt-16 pb-12 border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 bg-brand-emerald-100 text-brand-emerald-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+        Mengenal Pengembang Kami
+      </div>
+      <h1 class="font-outfit font-black text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-tight">
+        Profil & Komitmen Endah Residence II
+      </h1>
+      <p class="text-neutral-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        Kami hadir sebagai pengembang properti lokal terpercaya di Bandar Batang yang menjunjung tinggi keterbukaan hukum, keandalan kualitas bangunan, dan kepuasan konsumen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Legal Transparency Section (Paling penting untuk Trust) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Text Info -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="space-y-2">
+            <span class="text-xs font-bold text-brand-amber-600 tracking-widest uppercase block">Prioritas Keamanan Hukum</span>
+            <h2 class="font-outfit font-extrabold text-3xl text-neutral-900 leading-snug">
+              Perang Melawan Penipuan Properti: Kami Menjamin Legalitas 100% Aman
+            </h2>
+          </div>
+          
+          <p class="text-neutral-600 text-xs sm:text-sm leading-relaxed">
+            Dewasa ini, banyak sekali beredar kasus penipuan properti berkedok perumahan murah namun izinnya bermasalah atau tanah sengketa. Di <strong>Endah Residence II</strong>, kami memberikan kepastian total bagi tabungan investasi masa depan Anda.
+          </p>
+
+          <!-- Core Legal Bullet Points -->
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <span class="font-outfit font-bold text-neutral-800 text-sm block">Sertifikat Hak Milik (SHM) Siap</span>
+                <span class="text-xs text-neutral-500 block">Setiap kavling tanah sudah memiliki SHM yang terpecah dan siap langsung dibaliknamakan setelah pelunasan KPR.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <span class="font-outfit font-bold text-neutral-800 text-sm block">Persetujuan Bangunan Gedung (PBG / IMB) Resmi</span>
+                <span class="text-xs text-neutral-500 block">Izin mendirikan bangunan telah terbit resmi dari dinas perizinan terpadu Kabupaten Batang. Bebas sengketa & aman hukum.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div class="space-y-1">
+                <span class="font-outfit font-bold text-neutral-800 text-sm block">Anggota Real Estate Indonesia (REI)</span>
+                <span class="text-xs text-neutral-500 block">Sebagai jaminan mutu kerja profesional, kami merupakan anggota resmi asosiasi REI Jawa Tengah dengan rekam jejak tepercaya.</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right Side: Graphic Visual Frame -->
+        <div class="lg:col-span-6 relative flex justify-center">
+          <div class="absolute -inset-4 bg-brand-emerald-500 rounded-3xl opacity-5 blur-2xl"></div>
+          <div class="relative w-full max-w-md sm:max-w-lg rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+            <Image 
+              src={heroImage} 
+              alt="Perumahan Endah Residence II Bandar Batang legalitas terjamin aman" 
+              class="w-full h-auto object-cover"
+              sizes="(max-width: 640px) 100vw, 500px"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-neutral-950/20"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Developer Mission Section -->
+  <section class="py-20 bg-neutral-50 border-t border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200/50 shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-outfit font-black text-xl text-neutral-900">Visi Pengembang</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+            Menjadi pengembang properti lokal terdepan di Kabupaten Batang yang dikenal karena integritasnya yang tinggi, transparansi hukum, dan kemampuan menyediakan perumahan subsidi berkualitas tinggi yang terjangkau oleh semua kalangan masyarakat.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200/50 shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="font-outfit font-black text-xl text-neutral-900">Misi Pengembang</h3>
+          <p class="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+            Membangun kawasan hunian sehat yang dilengkapi infrastruktur cor beton kokoh, mempercepat penyelesaian unit demi komitmen serah terima yang tepat waktu, serta menyelenggarakan pendampingan KPR perbankan yang jujur, transparan, dan tanpa manipulasi biaya.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

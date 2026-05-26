@@ -1,0 +1,44 @@
+---
+interface Props {
+  unitType?: 'tipe-30' | 'tipe-36' | 'general';
+}
+
+const { unitType = 'general' } = Astro.props;
+
+// Build pre-filled text based on context
+let prefilledText = "Halo Tim Endah Residence II, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda. Mohon informasinya.";
+
+if (unitType === 'tipe-30') {
+  prefilledText = "Halo Tim Endah Residence II, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 30 (Subsidi). Mohon informasinya.";
+} else if (unitType === 'tipe-36') {
+  prefilledText = "Halo Tim Endah Residence II, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 36 (Komersil). Mohon informasinya.";
+}
+
+const waLink = `https://wa.me/6282134994060?text=${encodeURIComponent(prefilledText)}`;
+---
+
+<a 
+  href={waLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl shadow-emerald-500/30 hover:scale-110 active:scale-95 transition-all duration-300 group border border-emerald-400/20"
+  aria-label="Hubungi kami melalui WhatsApp"
+>
+  <!-- Pulsing Backdrop Glow -->
+  <span class="absolute inset-0 rounded-full bg-emerald-500 opacity-75 animate-ping group-hover:animate-none"></span>
+
+  <!-- WhatsApp Icon SVG -->
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    class="w-7 h-7 relative z-10 filter drop-shadow-sm" 
+    fill="currentColor" 
+    viewBox="0 0 24 24"
+  >
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.436 0 9.86-4.413 9.864-9.843.002-2.63-1.023-5.101-2.886-6.968C16.386 1.936 13.912.914 11.28.913 5.845.913 1.42 5.326 1.416 10.756c-.002 1.57.418 3.102 1.215 4.467l-.997 3.633 3.731-.977.298.175zM15.75 18c-.225 0-1.02-.45-1.92-1.35-1.125-1.125-2.07-2.475-2.625-3.45-.15-.3-.075-.45.075-.6.15-.15.3-.3.45-.45.075-.15.15-.225.15-.375 0-.15-.075-.3-.15-.45l-.75-1.8c-.225-.525-.45-.45-.6-.45-.15 0-.3 0-.45.075-.45.075-.75.3-.975.75-.45.75-.45 1.725.15 2.775.675 1.2 1.8 2.55 3.3 3.6 1.8 1.2 3.15 1.65 3.9 1.575.75-.075 1.2-.525 1.425-.975.15-.3.15-.6.075-.75-.15-.15-.45-.3-.75-.375z" />
+  </svg>
+
+  <!-- Tooltip text (appears on hover) -->
+  <span class="absolute right-16 bg-neutral-900 text-white text-xs font-bold font-outfit py-2 px-4 rounded-xl shadow-lg opacity-0 pointer-events-none transition-all duration-300 group-hover:opacity-100 whitespace-nowrap border border-neutral-800">
+    Hubungi Kami (WhatsApp)
+  </span>
+</a>

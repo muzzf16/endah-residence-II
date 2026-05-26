@@ -1,0 +1,196 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+
+// Import images for cover mapping
+import heroImage from '../../../assets/images/hero_estate.png';
+import tipe30Image from '../../../assets/images/tipe_30_facade.png';
+import tipe36Image from '../../../assets/images/tipe_36_facade.png';
+import progressRoad from '../../../assets/images/progress_road.png';
+
+// Generate static paths for all posts in the collection
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { 
+      category: post.data.category,
+      id: post.id 
+    },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+// Helper function to map cover image strings to actual imports or absolute paths
+const getImageSource = (imageStr: string | undefined) => {
+  if (imageStr?.includes('tipe_30_facade')) return tipe30Image;
+  if (imageStr?.includes('tipe_36_facade')) return tipe36Image;
+  if (imageStr?.includes('progress_road')) return progressRoad;
+  return heroImage;
+};
+
+// Formatter for localized Indonesian dates
+const formattedDate = new Date(post.data.publishDate).toLocaleDateString('id-ID', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const postUrl = `https://endahresidence.com/blog/${post.data.category}/${post.id}`;
+
+// 1. Article Schema JSON-LD
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "image": `https://endahresidence.com/assets/${post.data.image?.split('/').pop()}`,
+  "datePublished": post.data.publishDate.toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": post.data.author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Endah Residence II",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://endahresidence.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": postUrl
+  }
+};
+
+// 2. FAQ Schema JSON-LD (If present)
+const faqSchema = post.data.faq ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": post.data.faq.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+} : null;
+---
+
+<Layout title={post.data.title} description={post.data.description} ogImage={post.data.image}>
+  
+  <!-- SEO Schemas Injection in body (highly parsed by crawler) -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  {faqSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )}
+
+  <!-- Breadcrumbs -->
+  <div class="bg-neutral-50 border-b border-neutral-100 py-3 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex gap-2 text-neutral-500 font-semibold uppercase tracking-wider text-[10px] sm:text-xs">
+      <a href="/" class="hover:text-brand-emerald-800 transition">Beranda</a>
+      <span>/</span>
+      <a href="/blog" class="hover:text-brand-emerald-800 transition">Blog</a>
+      <span>/</span>
+      <a href={`/blog#${post.data.category}`} class="hover:text-brand-emerald-800 transition">{post.data.category}</a>
+      <span>/</span>
+      <span class="text-neutral-800 truncate max-w-[200px] sm:max-w-xs">{post.data.title}</span>
+    </div>
+  </div>
+
+  <!-- Main Article Body -->
+  <article class="py-12 sm:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      
+      <!-- Meta & Title Header -->
+      <div class="space-y-4 text-center sm:text-left mb-10">
+        <span class="inline-flex bg-brand-emerald-100 text-brand-emerald-800 text-[10px] font-black px-3.5 py-1 rounded-full uppercase tracking-widest border border-brand-emerald-200">
+          Kategori: {post.data.category}
+        </span>
+        
+        <h1 class="font-outfit font-black text-3xl sm:text-4xl lg:text-5xl text-neutral-950 leading-tight">
+          {post.data.title}
+        </h1>
+        
+        <div class="flex items-center justify-center sm:justify-start gap-3 text-xs font-bold text-neutral-400">
+          <span>Oleh {post.data.author}</span>
+          <span>•</span>
+          <span>{formattedDate}</span>
+        </div>
+      </div>
+
+      <!-- Large Cover Photo -->
+      <div class="rounded-3xl overflow-hidden shadow-lg border border-neutral-100 aspect-[16/10] bg-neutral-100 mb-12">
+        <Image 
+          src={getImageSource(post.data.image)} 
+          alt={post.data.title} 
+          class="w-full h-full object-cover"
+          sizes="(max-width: 640px) 100vw, 800px"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Article Rich Text Markdown slot -->
+      <div class="prose prose-neutral max-w-none prose-h2:font-outfit prose-h2:font-extrabold prose-h2:text-2xl prose-h2:text-neutral-900 prose-h2:mt-10 prose-h2:mb-4 prose-p:text-neutral-600 prose-p:leading-relaxed prose-p:mb-6 prose-strong:text-neutral-950 prose-li:text-neutral-600 prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6">
+        <Content />
+      </div>
+
+      <!-- FAQ Accordions (Visible to users as an elegant accordion + trust element) -->
+      {post.data.faq && (
+        <div class="mt-16 border-t border-neutral-200 pt-12 space-y-6">
+          <h2 class="font-outfit font-black text-2xl text-neutral-900 mb-6">Pertanyaan Sering Diajukan (FAQ)</h2>
+          
+          <div class="space-y-4">
+            {post.data.faq.map((item, idx) => (
+              <details class="bg-neutral-50 rounded-2xl border border-neutral-200/50 p-5 group transition duration-300 [&_summary::-webkit-details-marker]:hidden">
+                <summary class="flex justify-between items-center font-outfit font-bold text-neutral-900 text-sm sm:text-base cursor-pointer list-none">
+                  {item.question}
+                  <span class="w-6 h-6 rounded-full bg-brand-emerald-100 text-brand-emerald-800 flex items-center justify-center shrink-0 group-open:rotate-180 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class="text-neutral-500 text-xs sm:text-sm mt-3 leading-relaxed border-t border-neutral-200/60 pt-3">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Article Footer conversion hooks -->
+      <div class="mt-16 bg-brand-emerald-950 text-white rounded-3xl p-8 text-center space-y-6 shadow-xl">
+        <span class="text-[10px] font-black text-brand-amber-500 tracking-widest uppercase block">Konsultasi Pembelian</span>
+        <h3 class="font-outfit font-extrabold text-2xl">Mulai Wujudkan Rumah Impian Anda</h3>
+        <p class="text-brand-emerald-200 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
+          Jangan ragu untuk mengobrol santai dengan tim marketing kami mengenai syarat pemberkasan KPR, promo potongan booking fee, atau rute jalan tercepat ke perumahan.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href={`https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20baru%20saja%20membaca%20artikel%20"${encodeURIComponent(post.data.title)}"%20dan%20tertarik%20dengan%20proyek%20Anda.%20Mohon%20informasinya.`} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-outfit font-bold px-8 py-3 rounded-xl transition duration-300 hover:scale-[1.02]"
+          >
+            Hubungi Marketing (WA)
+          </a>
+          <a 
+            href="/unit" 
+            class="inline-flex items-center justify-center bg-brand-emerald-900 hover:bg-brand-emerald-800 text-white border border-brand-emerald-800 font-outfit font-bold px-8 py-3 rounded-xl transition hover:scale-[1.02]"
+          >
+            Lihat Katalog Unit
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

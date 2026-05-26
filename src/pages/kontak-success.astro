@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Pesan Berhasil Dikirim | Endah Residence II";
+const description = "Terima kasih telah menghubungi Endah Residence II Bandar Batang. Pesan Anda telah terkirim dan akan segera ditindaklanjuti oleh sales marketing kami.";
+---
+
+<Layout title={title} description={description}>
+  <section class="min-h-[70vh] flex items-center justify-center bg-neutral-50 py-16">
+    <div class="max-w-md w-full mx-auto px-4 text-center space-y-6">
+      
+      <!-- Big green check icon -->
+      <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="font-outfit font-black text-3xl text-neutral-900 leading-tight">Formulir Terkirim!</h1>
+        <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+          Terima kasih telah menyatakan minat Anda pada <strong>Endah Residence II</strong>. Data kontak Anda telah terekam dengan aman dalam sistem kami.
+        </p>
+      </div>
+
+      <!-- Option to immediately chat via WhatsApp if in a hurry -->
+      <div class="bg-white p-6 rounded-3xl border border-neutral-200/60 shadow-sm space-y-4">
+        <span class="text-xs font-bold text-neutral-400 uppercase tracking-wider block">Ingin Respon Lebih Cepat?</span>
+        <a 
+          href="https://wa.me/6282134994060?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20baru%20saja%20mengisi%20formulir%20di%20website%20dan%20ingin%20segera%20konsultasi.%20Mohon%20bantuannya." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="w-full inline-flex items-center justify-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-bold py-3 rounded-2xl transition duration-300 text-sm text-center shadow-lg shadow-brand-emerald-800/10"
+        >
+          Hubungi WhatsApp Sekarang
+        </a>
+      </div>
+
+      <div>
+        <a href="/" class="text-xs font-bold text-brand-amber-600 hover:text-brand-amber-700 transition uppercase tracking-wider">
+          Kembali ke Beranda Utama
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>

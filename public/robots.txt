@@ -1,0 +1,6 @@
+# User-agent rules for search engine crawlers
+User-agent: *
+Allow: /
+
+# Canonical sitemap location
+Sitemap: https://endahresidence.com/sitemap-index.xml
