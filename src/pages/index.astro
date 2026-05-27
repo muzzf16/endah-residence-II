@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import GoogleMapsLocator from '../components/GoogleMapsLocator.astro';
 
 // Import local generated property assets
 import heroImage from '../assets/images/hero_estate.png';
@@ -491,7 +490,14 @@ const description = "Perumahan subsidi & komersil terbaik di Bandar, Batang. Lok
         <!-- Right: Maps Embed -->
         <div class="lg:col-span-7">
           <div class="bg-white rounded-3xl overflow-hidden shadow-xl p-4 border border-neutral-200/60 aspect-[4/3] sm:aspect-[16/10] lg:aspect-square xl:aspect-[16/10] relative w-full">
-            <GoogleMapsLocator />
+            <iframe 
+              src="https://maps.google.com/maps?q=Endah%20Residence%202%20Batang,%20Sempu,%20Batiombo&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0 rounded-2xl" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Peta Lokasi Perumahan Endah Residence II Bandar Batang"
+            ></iframe>
           </div>
         </div>
 
