@@ -8,7 +8,7 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
-  unitType?: 'tipe-30' | 'tipe-36' | 'general';
+  unitType?: 'tipe-32' | 'tipe-36' | 'general';
 }
 
 const { 
@@ -74,7 +74,7 @@ const breadcrumbItems = pathSegments.map((segment, index) => {
   const name = segment
     .replace(/-/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase())
-    .replace('Tipe 30 Subsidi', 'Tipe 30 (Subsidi)')
+    .replace('Tipe 32 Subsidi', 'Tipe 32 (Subsidi)')
     .replace('Tipe 36 Komersil', 'Tipe 36 (Komersil)');
   return {
     "@type": "ListItem",

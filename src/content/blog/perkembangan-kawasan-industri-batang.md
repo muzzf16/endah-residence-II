@@ -25,7 +25,7 @@ Dampak dari pertumbuhan ekonomi KITB ini tidak hanya dirasakan di area pesisir B
 Masuknya puluhan pabrik baru di KITB menyerap ribuan tenaga kerja baru—mulai dari staf operasional lapangan, staf administratif kantoran, hingga ekspatriat/tenaga kerja asing tingkat manajerial.
 *   **Kebutuhan Tempat Tinggal Baru**: Sebagian besar karyawan tersebut berasal dari luar kota Batang dan membutuhkan hunian tinggal sementara maupun permanen.
 *   **Bandar sebagai Pilihan Utama**: Mengapa mereka memilih tinggal di Bandar? Kawasan industri KITB terletak di pesisir utara yang cenderung bersuhu panas dan berpolusi udara industri. Bandar menawarkan kontras yang sangat dicari: lingkungan perbukitan yang berhawa sejuk, udara bersih bebas polusi pabrik, air tanah melimpah, dan biaya hidup lokal yang sangat terjangkau.
-*   **Investasi Sewa yang Menjanjikan**: Membeli rumah tipe 30 atau tipe 36 di **Endah Residence 2 Batang** saat ini merupakan investasi emas. Rumah tersebut dapat disewakan kembali sebagai rumah kontrakan tahunan atau kos-kosan dengan target pasar para karyawan KITB dengan tingkat keuntungan sewa (*rental yield*) yang tinggi.
+*   **Investasi Sewa yang Menjanjikan**: Membeli rumah tipe 32 atau tipe 36 di **Endah Residence 2 Batang** saat ini merupakan investasi emas. Rumah tersebut dapat disewakan kembali sebagai rumah kontrakan tahunan atau kos-kosan dengan target pasar para karyawan KITB dengan tingkat keuntungan sewa (*rental yield*) yang tinggi.
 
 ---
 
