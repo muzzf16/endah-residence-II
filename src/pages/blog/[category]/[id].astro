@@ -39,7 +39,7 @@ const formattedDate = new Date(post.data.publishDate).toLocaleDateString('id-ID'
   day: 'numeric'
 });
 
-const postUrl = `https://endahresidence.com/blog/${post.data.category}/${post.id}`;
+const postUrl = `https://www.endahresidence.online/blog/${post.data.category}/${post.id}`;
 
 // 1. Article Schema JSON-LD
 const articleSchema = {
@@ -47,7 +47,7 @@ const articleSchema = {
   "@type": "NewsArticle",
   "headline": post.data.title,
   "description": post.data.description,
-  "image": `https://endahresidence.com/assets/${post.data.image?.split('/').pop()}`,
+  "image": `https://www.endahresidence.online/assets/${post.data.image?.split('/').pop()}`,
   "datePublished": post.data.publishDate.toISOString(),
   "author": {
     "@type": "Person",
@@ -58,7 +58,7 @@ const articleSchema = {
     "name": "Endah Residence II",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://endahresidence.com/favicon.png"
+      "url": "https://www.endahresidence.online/favicon.png"
     }
   },
   "mainEntityOfPage": {
