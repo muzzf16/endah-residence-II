@@ -6,12 +6,12 @@ interface Props {
 const { unitType = 'general' } = Astro.props;
 
 // Build pre-filled text based on context
-let prefilledText = "Halo Tim Endah Residence II, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda. Mohon informasinya.";
+let prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda. Mohon informasinya.";
 
 if (unitType === 'tipe-30') {
-  prefilledText = "Halo Tim Endah Residence II, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 30 (Subsidi). Mohon informasinya.";
+  prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 30 (Subsidi). Mohon informasinya.";
 } else if (unitType === 'tipe-36') {
-  prefilledText = "Halo Tim Endah Residence II, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 36 (Komersil). Mohon informasinya.";
+  prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 36 (Komersil). Mohon informasinya.";
 }
 
 const waLink = `https://wa.me/6282134994060?text=${encodeURIComponent(prefilledText)}`;

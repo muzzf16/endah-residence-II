@@ -5,12 +5,12 @@ publishDate: "2026-05-27"
 category: "properti"
 tags: ["Tips Properti", "Rumah Pertama", "Investasi Properti", "Bandar Batang"]
 image: "/src/assets/images/interior_mockup.png"
-author: "Tim Sales Endah Residence II"
+author: "Tim Sales Endah Residence 2 Batang"
 faq:
   - question: "Berapa booking fee rata-rata perumahan di Bandar Batang?"
-    answer: "Booking fee untuk perumahan di area Bandar berkisar antara Rp 1.000.000 hingga Rp 2.000.000. Di Endah Residence II, booking fee kami sangat ringan dan sudah memotong harga jual."
+    answer: "Booking fee untuk perumahan di area Bandar berkisar antara Rp 1.000.000 hingga Rp 2.000.000. Di Endah Residence 2 Batang, booking fee kami sangat ringan dan sudah memotong harga jual."
   - question: "Bagaimana cara memeriksa legalitas tanah perumahan?"
-    answer: "Anda wajib menanyakan kepemilikan sertifikat induk (SHM) dan izin PBG/IMB kepada pihak developer. Developer yang terpercaya seperti Endah Residence II akan memperlihatkan bukti sertifikat ready demi kenyamanan pembeli."
+    answer: "Anda wajib menanyakan kepemilikan sertifikat induk (SHM) dan izin PBG/IMB kepada pihak developer. Developer yang terpercaya seperti Endah Residence 2 Batang akan memperlihatkan bukti sertifikat ready demi kenyamanan pembeli."
   - question: "Apakah kawasan Bandar Batang ramah untuk tempat tinggal keluarga?"
     answer: "Sangat ramah. Bandar dikenal memiliki kualitas udara pegunungan yang sejuk, bebas polusi industri perkotaan, air bersih artesis melimpah, dan dikelilingi fasilitas sekolah yang lengkap."
 ---
@@ -31,7 +31,7 @@ Banyak developer mengiklankan promo "DP 0%" atau "Cicilan Murah Tanpa DP". Sebag
 ## 2. Lakukan Survei Lokasi Fisik di Waktu yang Berbeda
 Jangan pernah membeli rumah "kucing dalam karung" hanya berdasarkan brosur digital atau foto render arsitektur. Anda wajib mendatangi lokasi proyek secara langsung.
 *   **Datang di Musim Hujan**: Ini adalah tips krusial untuk membuktikan apakah perumahan tersebut benar-benar bebas banjir atau memiliki sistem drainase got yang lancar.
-*   **Cek Kualitas Air Bersih**: Tanyakan kepada penghuni sekitar atau tim lapangan mengenai kelancaran air bersih. Kawasan Bandar Batang di **Endah Residence II** memiliki keunggulan sumur bor artesis dalam yang menghasilkan air jernih dan deras sepanjang tahun.
+*   **Cek Kualitas Air Bersih**: Tanyakan kepada penghuni sekitar atau tim lapangan mengenai kelancaran air bersih. Kawasan Bandar Batang di **Endah Residence 2 Batang** memiliki keunggulan sumur bor artesis dalam yang menghasilkan air jernih dan deras sepanjang tahun.
 
 ---
 
@@ -39,7 +39,7 @@ Jangan pernah membeli rumah "kucing dalam karung" hanya berdasarkan brosur digit
 Ini adalah langkah paling krusial demi menghindari penipuan properti bodong. Pastikan pengembang Anda transparan mengenai dokumen hukum tanah:
 *   **Sertifikat Induk**: Tanyakan apakah tanah sudah berstatus **Sertifikat Hak Milik (SHM)** dan telah pecah per kavling atau masih berstatus sertifikat induk girik.
 *   **PBG (IMB)**: Pastikan proyek perumahan sudah memiliki Persetujuan Bangunan Gedung (PBG) resmi dari pemerintah Kabupaten Batang untuk menjamin legalitas struktur bangunan gedung.
-*   *Di Endah Residence II, seluruh berkas hukum SHM dan PBG kami sudah terbit aman dan siap diperlihatkan secara transparan kepada setiap calon pembeli.*
+*   *Di Endah Residence 2 Batang, seluruh berkas hukum SHM dan PBG kami sudah terbit aman dan siap diperlihatkan secara transparan kepada setiap calon pembeli.*
 
 ---
 
@@ -59,4 +59,4 @@ Pastikan developer perumahan yang Anda pilih memiliki rekam jejak yang bersih da
 ## Kesimpulan
 Membeli rumah pertama memang menantang, namun dengan menerapkan persiapan yang matang dan memilih pengembang yang terpercaya, proses ini akan berjalan dengan sangat menyenangkan dan aman. 
 
-Apakah Anda siap memulai pencarian hunian idaman keluarga Anda? Hubungi perwakilan marketing **Endah Residence II** hari ini untuk menjadwalkan kunjungan lokasi atau sekadar berkonsultasi mengenai kelayakan KPR Anda secara santai dan gratis!
+Apakah Anda siap memulai pencarian hunian idaman keluarga Anda? Hubungi perwakilan marketing **Endah Residence 2 Batang** hari ini untuk menjadwalkan kunjungan lokasi atau sekadar berkonsultasi mengenai kelayakan KPR Anda secara santai dan gratis!

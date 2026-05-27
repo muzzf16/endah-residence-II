@@ -5,19 +5,19 @@ publishDate: "2026-05-27"
 category: "kpr"
 tags: ["KPR Subsidi", "Rumah Murah", "Bandar Batang", "KPR BTN"]
 image: "/src/assets/images/tipe_30_facade.png"
-author: "Tim Sales Endah Residence II"
+author: "Tim Sales Endah Residence 2 Batang"
 faq:
   - question: "Berapa batas maksimal penghasilan untuk KPR subsidi di Batang?"
     answer: "Batas penghasilan pokok maksimal untuk mengajukan KPR subsidi (FLPP) adalah Rp 8.000.000 per bulan untuk perorangan atau pasangan suami-istri."
   - question: "Apakah bisa mengajukan KPR subsidi jika memiliki cicilan motor?"
     answer: "Bisa, asalkan rasio hutang bulanan Anda (DSR) masih di bawah 30-40% dari total penghasilan bersih dan status pembayaran cicilan motor lancar (Kolektibilitas 1)."
-  - question: "Apa bank penyalur KPR subsidi di Endah Residence II?"
+  - question: "Apa bank penyalur KPR subsidi di Endah Residence 2 Batang?"
     answer: "Kami bekerja sama dengan bank penyalur KPR terkemuka seperti BTN, BTN Syariah, BNI, dan Bank Mandiri untuk menjamin proses akad KPR yang aman dan cepat."
 ---
 
 Memiliki rumah pribadi di usia muda kini bukan lagi sekadar impian. Pemerintah Indonesia terus menyelenggarakan program **Fasilitas Likuiditas Pembiayaan Perumahan (FLPP)** atau KPR Subsidi untuk membantu masyarakat berpenghasilan rendah (MBR) mendapatkan hunian pertamanya.
 
-Jika Anda berencana mengambil rumah subsidi di Kabupaten Batang—khususnya di **Endah Residence II Bandar**—maka sangat penting bagi Anda untuk memahami syarat dan dokumen administratif yang diperlukan agar pengajuan KPR Anda disetujui 100% oleh perbankan.
+Jika Anda berencana mengambil rumah subsidi di Kabupaten Batang—khususnya di **Endah Residence 2 Batang Bandar**—maka sangat penting bagi Anda untuk memahami syarat dan dokumen administratif yang diperlukan agar pengajuan KPR Anda disetujui 100% oleh perbankan.
 
 ---
 
@@ -60,13 +60,13 @@ Salah satu alasan utama mengapa pengajuan rumah subsidi ditolak oleh bank adalah
 Bank akan memeriksa seluruh riwayat pinjaman Anda—termasuk paylater belanja online, cicilan kartu kredit, cicilan sepeda motor, hingga pinjaman online (pinjol).
 
 ### Tips Agar Lolos Audit SLIK OJK:
-1.  **Lunasi Hutang Pinjol & Paylater**: Sebelum menyerahkan berkas KPR ke marketing Endah Residence II, pastikan Anda telah melunasi seluruh sisa tagihan pinjaman online dan paylater Anda hingga mendapatkan surat keterangan lunas.
+1.  **Lunasi Hutang Pinjol & Paylater**: Sebelum menyerahkan berkas KPR ke marketing Endah Residence 2 Batang, pastikan Anda telah melunasi seluruh sisa tagihan pinjaman online dan paylater Anda hingga mendapatkan surat keterangan lunas.
 2.  **Jaga Kolektibilitas**: Pastikan status pinjaman Anda berada di **Kolektibilitas 1 (Lancar)**, yang artinya tidak pernah menunggak cicilan bulanan.
 3.  **Rasio Cicilan**: Jaga agar sisa cicilan hutang bulanan Anda lainnya tidak melebihi 30% dari total pendapatan bulanan Anda agar bank menilai kapasitas pembayaran Anda masih aman.
 
 ---
 
-## Kesimpulan: Ambil Langkah Pertama Anda di Endah Residence II
-Proses pengurusan berkas KPR subsidi sebenarnya sangat mudah jika didampingi oleh tim pengembang yang berpengalaman. Di **Endah Residence II Bandar Batang**, tim sales marketing kami akan membantu Anda merapikan seluruh berkas administratif, mengarahkan pilihan bank penyalur dengan promo bunga flat 5% terbaik, hingga mendampingi Anda sampai proses akad kunci terlaksana dengan aman.
+## Kesimpulan: Ambil Langkah Pertama Anda di Endah Residence 2 Batang
+Proses pengurusan berkas KPR subsidi sebenarnya sangat mudah jika didampingi oleh tim pengembang yang berpengalaman. Di **Endah Residence 2 Batang Bandar Batang**, tim sales marketing kami akan membantu Anda merapikan seluruh berkas administratif, mengarahkan pilihan bank penyalur dengan promo bunga flat 5% terbaik, hingga mendampingi Anda sampai proses akad kunci terlaksana dengan aman.
 
 Jangan ragu untuk mengonsultasikan kelayakan profil keuangan Anda dengan kami hari ini secara gratis melalui tombol WhatsApp di bawah!
