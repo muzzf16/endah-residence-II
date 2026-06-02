@@ -1,6 +1,7 @@
 ---
 title: "Keuntungan Investasi Properti di Dekat Kawasan Industri Terpadu Batang (KIT Batang)"
-pubDate: 2024-05-30
+publishDate: 2024-05-30
+category: "investasi"
 description: "Menjelajahi potensi pertumbuhan nilai properti dan peluang bisnis seiring perkembangan masif Kawasan Industri Terpadu Batang (KIT Batang)."
 author: "Admin Endah Residence"
 tags: ["Investasi", "Properti", "KIT Batang", "Rumah Batang"]
@@ -48,4 +49,4 @@ Investasi properti bukan sekadar membeli bangunan, tetapi membeli masa depan. De
 **Tertarik memiliki properti strategis di Batang?**
 Jangan lewatkan kesempatan emas ini. Hubungi tim marketing kami untuk konsultasi unit yang tersedia!
 
-[Hubungi Kami via WhatsApp](https://wa.me/your-number-here)
+[Hubungi Kami via WhatsApp](https://wa.me/6287880211288?text=Halo%20Tim%20Endah%20Residence%20II%2C%20saya%20tertarik%20dengan%20proyek%20Anda%20setelah%20membaca%20artikel%20investasi%20KIT%20Batang.%20Mohon%20infonya.)
