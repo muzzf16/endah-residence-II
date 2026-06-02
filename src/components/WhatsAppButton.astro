@@ -1,6 +1,6 @@
 ---
 interface Props {
-  unitType?: 'tipe-32' | 'tipe-36' | 'general';
+  unitType?: 'tipe-32' | 'tipe-48' | 'general';
 }
 
 const { unitType = 'general' } = Astro.props;
@@ -9,12 +9,12 @@ const { unitType = 'general' } = Astro.props;
 let prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda. Mohon informasinya.";
 
 if (unitType === 'tipe-32') {
-  prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 32 (Subsidi). Mohon informasinya.";
-} else if (unitType === 'tipe-36') {
-  prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 36 (Komersil). Mohon informasinya.";
+  prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 32/66 (Subsidi). Mohon informasinya.";
+} else if (unitType === 'tipe-48') {
+  prefilledText = "Halo Tim Endah Residence 2 Batang, saya melihat informasi dari Website. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe 48/66 (Subsidi Plus). Mohon informasinya.";
 }
 
-const waLink = `https://wa.me/6282134994060?text=${encodeURIComponent(prefilledText)}`;
+const waLink = `https://wa.me/6287880211288?text=${encodeURIComponent(prefilledText)}`;
 ---
 
 <a 

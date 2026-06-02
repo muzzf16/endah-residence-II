@@ -8,7 +8,7 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
-  unitType?: 'tipe-32' | 'tipe-36' | 'general';
+  unitType?: 'tipe-32' | 'tipe-48' | 'general';
 }
 
 const { 
@@ -36,7 +36,7 @@ const agentSchema = {
   "image": "https://www.endahresidence.online/assets/hero_estate.png",
   "@id": "https://www.endahresidence.online/#agent",
   "url": "https://www.endahresidence.online",
-  "telephone": "082134994060",
+  "telephone": "087880211288",
   "priceRange": "Rp150.000.000 - Rp350.000.000",
   "address": {
     "@type": "PostalAddress",
@@ -75,7 +75,7 @@ const breadcrumbItems = pathSegments.map((segment, index) => {
     .replace(/-/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase())
     .replace('Tipe 32 Subsidi', 'Tipe 32 (Subsidi)')
-    .replace('Tipe 36 Komersil', 'Tipe 36 (Komersil)');
+    .replace('Tipe 48 Subsidi Plus', 'Tipe 48 (Subsidi Plus)');
   return {
     "@type": "ListItem",
     "position": index + 2,

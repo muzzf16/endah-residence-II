@@ -240,8 +240,8 @@ Integrasi Headless CMS:
 ## **Unit / Produk (Silo Architecture)**
 
 /unit  
-/unit/tipe-30-subsidi  
-/unit/tipe-36-komersil
+/unit/tipe-32-subsidi  
+/unit/tipe-48-subsidi-plus
 
 ## **SEO Landing Pages (Area Based)**
 
@@ -303,7 +303,7 @@ Menampilkan:
 
 Footer harus sama di SEMUA halaman, berisi:
 
-* **NAP (Name, Address, Phone)**: Endah Residence II, Jl. Sendang-Tulis Batiombo, Bandar, Batang. Telp: 082134994060\.  
+* **NAP (Name, Address, Phone)**: Endah Residence II, Jl. Sendang-Tulis Batiombo, Bandar, Batang. Telp: 0878-8021-1288 / 0821-3499-4060.  
 * Link ke Google Maps Profile.  
 * Link ke semua halaman penting dan Kategori Blog.
 
@@ -379,7 +379,7 @@ Data berikut harus konsisten di *Footer Website, Google Maps, dan Instagram*:
 
 * Nama Bisnis: Endah Residence II  
 * Alamat Lengkap: Jl. Sendang-Tulis, Batiombo, Bandar, Batang  
-* Nomor Telepon: 082134994060 / 087880211288
+* Nomor Telepon: 087880211288 / 082134994060
 
 # **12\. Technical SEO Requirements**
 
@@ -432,7 +432,7 @@ Fitur:
 
 Contoh:
 
-"Halo Tim Endah Residence II, saya melihat informasi dari **Website**. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe \[30/36\]. Mohon informasinya."
+"Halo Tim Endah Residence II, saya melihat informasi dari **Website**. Saya tertarik dengan perumahan Anda dan ingin menanyakan tentang unit Tipe \[32/48\]. Mohon informasinya."
 
 *(Sangat penting untuk menambahkan kata "dari Website" agar tim sales tahu konversi ini hasil dari optimasi SEO Anda, bukan dari brosur fisik).*
 
@@ -503,7 +503,7 @@ Hindari:
 Fokus Pengembangan:
 
 * Homepage lengkap (Hero, Progres, Peta, Unit)  
-* Halaman Detail Unit (Tipe 30 & 36\)  
+* Halaman Detail Unit (Tipe 32 & 48)  
 * Global Footer & Header  
 * WhatsApp CTA terintegrasi  
 * Astro Setup \+ Tailwind  
