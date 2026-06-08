@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import GoogleRankTrust from '../../components/GoogleRankTrust.astro';
 
 // Import images
 import heroImage from '../../assets/images/hero_estate.png';
@@ -94,9 +95,9 @@ const faqSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       
       <div class="space-y-4">
-        <h2 class="font-outfit font-black text-2xl sm:text-3xl text-neutral-900">Mengapa Wilayah Bandar Batang Sangat Cocok untuk Tempat Tinggal?</h2>
+        <h2 class="font-outfit font-black text-2xl sm:text-3xl text-neutral-900">Mengapa Wilayah Bandar Menjadi Pilihan Perumahan Batang Terpopuler?</h2>
         <p class="text-neutral-500 text-sm leading-relaxed">
-          Kecamatan Bandar terletak di bagian selatan Kabupaten Batang yang dikenal dengan lanskap dataran tinggi berudara sejuk dan tanah yang subur. Berbeda dengan wilayah pesisir Batang yang berhawa panas dan dikelilingi polusi cerobong pabrik, Bandar menawarkan kualitas hidup premium yang sangat ramah bagi anak-anak dan orang tua.
+          Kecamatan Bandar terletak di bagian selatan Kabupaten Batang yang dikenal dengan lanskap dataran tinggi berudara sejuk. Sebagai kawasan strategis pencarian <strong>perumahan Batang</strong>, Bandar menawarkan kualitas hidup premium berhawa sejuk bebas polusi industri pesisir yang sangat ramah bagi anak-anak dan orang tua.
         </p>
       </div>
 
@@ -115,8 +116,17 @@ const faqSchema = {
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Google Business Profile Rank & SEO Success Trust Section -->
+  <GoogleRankTrust />
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white border-t border-neutral-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       <!-- FAQ Summary list (Rich snippet triggers) -->
-      <div class="space-y-6 border-t border-neutral-100 pt-12">
+      <div class="space-y-6">
         <h2 class="font-outfit font-black text-2xl text-neutral-900">Pertanyaan Umum Mengenai Perumahan Bandar Batang</h2>
         <div class="space-y-4">
           {faqList.map(item => (

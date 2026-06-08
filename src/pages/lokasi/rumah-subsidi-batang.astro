@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import GoogleRankTrust from '../../components/GoogleRankTrust.astro';
 
 // Import images
 import tipe30Image from '../../assets/images/tipe_30_facade.png';
@@ -93,9 +94,9 @@ const faqSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       
       <div class="space-y-4">
-        <h2 class="font-outfit font-black text-2xl sm:text-3xl text-neutral-900">Keunggulan KPR FLPP (Subsidi Pemerintah)</h2>
+        <h2 class="font-outfit font-black text-2xl sm:text-3xl text-neutral-900">Keunggulan KPR FLPP di Perumahan Batang Kami</h2>
         <p class="text-neutral-500 text-sm leading-relaxed">
-          KPR FLPP (Fasilitas Likuiditas Pembiayaan Perumahan) merupakan program bantuan pemerintah yang bertujuan memudahkan masyarakat berpenghasilan rendah mendapatkan rumah pertamanya secara terjangkau.
+          KPR FLPP (Fasilitas Likuiditas Pembiayaan Perumahan) merupakan program bantuan pemerintah yang bertujuan memudahkan masyarakat mendapatkan unit di <strong>perumahan Batang</strong> secara terjangkau dengan angsuran sangat ringan.
         </p>
       </div>
 
@@ -117,8 +118,17 @@ const faqSchema = {
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Google Business Profile Rank & SEO Success Trust Section -->
+  <GoogleRankTrust />
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white border-t border-neutral-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       <!-- FAQ Summary list (Rich snippet triggers) -->
-      <div class="space-y-6 border-t border-neutral-100 pt-12">
+      <div class="space-y-6">
         <h2 class="font-outfit font-black text-2xl text-neutral-900">Pertanyaan Sering Diajukan Tentang Rumah Subsidi Batang</h2>
         <div class="space-y-4">
           {faqList.map(item => (

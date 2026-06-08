@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import GoogleRankTrust from '../../components/GoogleRankTrust.astro';
 
 // Import images
 import progressRoad from '../../assets/images/progress_road.png';
@@ -93,7 +94,7 @@ const faqSchema = {
     <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       
       <div class="space-y-4">
-        <h2 class="font-outfit font-black text-2xl sm:text-3xl text-neutral-900">Mengapa Karyawan KITB Memilih Tinggal di Bandar Batang?</h2>
+        <h2 class="font-outfit font-black text-2xl sm:text-3xl text-neutral-900">Mengapa Karyawan KITB Memilih Perumahan Batang di Bandar?</h2>
         <p class="text-neutral-500 text-sm leading-relaxed">
           Kawasan Industri Terpadu Batang (KITB) merupakan salah satu pusat industri terbesar di Asia Tenggara yang mendatangkan puluhan ribu tenaga kerja pendatang. Karyawan cerdas memilih bertempat tinggal di **Bandar** karena berbagai alasan keunggulan lingkungan komuter berikut ini:
         </p>
@@ -109,13 +110,22 @@ const faqSchema = {
         <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-100 space-y-3">
           <h3 class="font-outfit font-bold text-lg text-neutral-800">📈 Investasi Sewa Bernilai Tinggi</h3>
           <p class="text-neutral-500 text-xs sm:text-sm">
-            Bagi investor properti luar daerah, membeli rumah tipe 32 atau tipe 36 di Endah Residence 2 Batang menjanjikan peluang sewa kontrakan yang sangat diminati oleh para pekerja industri dengan yield stabil.
+            Bagi investor properti luar daerah, membeli unit di <strong>perumahan Batang</strong> seperti Endah Residence 2 menjanjikan peluang sewa kontrakan yang sangat diminati oleh para pekerja industri dengan yield stabil.
           </p>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Google Business Profile Rank & SEO Success Trust Section -->
+  <GoogleRankTrust />
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white border-t border-neutral-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
       <!-- FAQ Summary list (Rich snippet triggers) -->
-      <div class="space-y-6 border-t border-neutral-100 pt-12">
+      <div class="space-y-6">
         <h2 class="font-outfit font-black text-2xl text-neutral-900">Pertanyaan Sering Diajukan Tentang Rumah Dekat KITB</h2>
         <div class="space-y-4">
           {faqList.map(item => (

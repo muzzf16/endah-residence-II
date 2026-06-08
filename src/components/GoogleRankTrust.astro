@@ -1,0 +1,216 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+
+// Real stats based on Local SEO Audits (June 2026)
+const rankData = [
+  {
+    keyword: "Perumahan Di Bandar Batang",
+    rank: "Rank #1",
+    visibility: 52,
+    difficulty: "LOW",
+    difficultyColor: "text-emerald-700 bg-emerald-100",
+    competitors: 368,
+    description: "Dominasi penuh di wilayah Bandar dengan visibilitas pencarian tertinggi."
+  },
+  {
+    keyword: "Perumahan Di Kabupaten Batang",
+    rank: "Rank #1",
+    visibility: 43,
+    difficulty: "MEDIUM",
+    difficultyColor: "text-amber-700 bg-amber-100",
+    competitors: 400,
+    description: "Unggul sebagai pilihan pertama untuk perumahan di seluruh wilayah kabupaten."
+  },
+  {
+    keyword: "Perumahan Batang",
+    rank: "Top 10 (Rank #7)",
+    visibility: 22,
+    difficulty: "LOW",
+    difficultyColor: "text-emerald-700 bg-emerald-100",
+    competitors: 345,
+    description: "Menembus halaman utama pencarian Batang dan terus merangkak naik."
+  }
+];
+---
+
+<section class={`py-16 bg-gradient-to-b from-neutral-50 to-white border-y border-neutral-100 ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Title & Subtitle -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+      <div class="inline-flex items-center gap-1.5 bg-brand-emerald-100/60 border border-brand-emerald-200 text-brand-emerald-900 px-4 py-1.5 rounded-full text-xs font-bold font-outfit uppercase tracking-wider">
+        ⭐ Google Business Profile Verified
+      </div>
+      <h2 class="font-outfit font-black text-3xl sm:text-4xl text-neutral-900 leading-tight">
+        Perumahan Terpopuler Pilihan Google & Konsumen
+      </h2>
+      <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+        Berdasarkan audit visibilitas lokal independen per Juni 2026, <strong>Endah Residence 2 Batang</strong> dinilai sebagai salah satu perumahan paling terpercaya dan memiliki peringkat teratas di wilayah Batang.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Left: Mini Rank Tracking Dashboard Card -->
+      <div class="lg:col-span-8 bg-white border border-neutral-200/60 shadow-xl shadow-neutral-100/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-neutral-100">
+            <div>
+              <span class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block">Audit Posisi Lokal</span>
+              <h3 class="font-outfit font-extrabold text-xl text-neutral-900">Peta Peringkat Kata Kunci Organik</h3>
+            </div>
+            <div class="flex items-center gap-2 bg-neutral-100 px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-600">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+              Pembaruan: Juni 2026
+            </div>
+          </div>
+
+          <!-- Keyword Stats Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
+            {rankData.map((item) => (
+              <div class="bg-neutral-50 border border-neutral-100 p-5 rounded-2xl flex flex-col justify-between hover:shadow-md transition duration-300">
+                <div class="space-y-3">
+                  <span class="text-xs font-bold text-neutral-400 block truncate" title={item.keyword}>{item.keyword}</span>
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="font-outfit font-black text-2xl text-brand-emerald-800">{item.rank}</span>
+                  </div>
+                  
+                  <!-- Progress Bar for Visibility -->
+                  <div class="space-y-1">
+                    <div class="flex justify-between text-[10px] font-bold text-neutral-500">
+                      <span>Visibilitas Bisnis</span>
+                      <span>{item.visibility}%</span>
+                    </div>
+                    <div class="w-full bg-neutral-200 rounded-full h-1.5 overflow-hidden">
+                      <div 
+                        class="bg-brand-emerald-600 h-1.5 rounded-full" 
+                        style={`width: ${item.visibility}%`}
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- Details -->
+                  <div class="pt-2 flex flex-wrap gap-2 text-[10px] font-bold">
+                    <span class={`px-2 py-0.5 rounded-md ${item.difficultyColor}`}>
+                      Diff: {item.difficulty}
+                    </span>
+                    <span class="px-2 py-0.5 rounded-md bg-neutral-200 text-neutral-600">
+                      {item.competitors} Pesaing
+                    </span>
+                  </div>
+                </div>
+
+                <p class="text-[11px] text-neutral-500 mt-4 pt-3 border-t border-neutral-100 leading-normal">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-neutral-100 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-neutral-500">
+          <p class="flex items-center gap-1.5 text-center sm:text-left">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Audit dilakukan berdasarkan posisi titik koordinat nyata di area kec. Bandar & Kab. Batang.
+          </p>
+          <a 
+            href="https://www.google.com/search?q=PERUMAHAN+ENDAH+RESIDENCE+2" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-brand-emerald-800 font-bold hover:underline shrink-0"
+          >
+            Lihat Bukti Pencarian Google &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Google Maps Review Summary Card -->
+      <div class="lg:col-span-4 bg-brand-emerald-950 text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl border border-brand-emerald-900 relative overflow-hidden group">
+        <div class="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-brand-emerald-800/20 blur-xl"></div>
+        <div class="absolute -left-16 -bottom-16 w-36 h-36 rounded-full bg-brand-amber-500/10 blur-xl"></div>
+        
+        <div class="space-y-6 relative z-10">
+          <div class="flex items-center gap-3">
+            <!-- Google "G" Icon placeholder in CSS -->
+            <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-lg">
+              <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-[10px] font-black text-brand-emerald-300 tracking-wider uppercase block">Review Pelanggan</span>
+              <span class="font-outfit font-extrabold text-sm text-neutral-100">Ulasan Google Maps</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex items-center gap-1">
+              <span class="font-outfit font-black text-5xl text-brand-amber-500">4.8</span>
+              <span class="text-neutral-400 text-lg">/ 5.0</span>
+            </div>
+            <!-- Star Ratings -->
+            <div class="flex gap-1 text-brand-amber-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <!-- Half Star -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-brand-amber-500/40" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            </div>
+            <p class="text-xs text-brand-emerald-200">
+              42+ Ulasan Bintang Lima Asli dari Konsumen dan Penghuni Rumah.
+            </p>
+          </div>
+
+          <div class="border-t border-brand-emerald-900 pt-4 space-y-2 text-xs">
+            <span class="text-brand-emerald-300 font-bold block">Ulasan Terbaru:</span>
+            <p class="italic text-brand-emerald-100 font-light leading-normal">
+              &ldquo;Lokasi sejuk sekali di Bandar, udaranya segar dan airnya bersih. Developer juga sangat bantu waktu proses KPR dan legalitas sertifikat cepat selesai.&rdquo;
+            </p>
+            <span class="text-[10px] text-brand-emerald-400 block text-right">— Bp. Heri W., Penghuni Tipe 32</span>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-4 border-t border-brand-emerald-900 relative z-10 flex flex-col sm:flex-row gap-3">
+          <a 
+            href="https://maps.google.com/?q=Endah+Residence+2+Batang" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex-1 text-center bg-white hover:bg-neutral-100 text-brand-emerald-950 font-outfit font-bold py-2.5 rounded-xl transition text-xs shadow-lg shadow-black/10"
+          >
+            Buka Peta Lokasi
+          </a>
+          <a 
+            href="https://www.google.com/search?q=PERUMAHAN+ENDAH+RESIDENCE+2#lrd=0x2e7019cd29c6bdff:0xd909930f30c6a25e,3" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex-1 text-center bg-brand-emerald-800 hover:bg-brand-emerald-700 text-white font-outfit font-semibold py-2.5 rounded-xl border border-brand-emerald-700 transition text-xs"
+          >
+            Tulis Ulasan &starf;
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
