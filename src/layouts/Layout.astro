@@ -110,6 +110,40 @@ const breadcrumbSchema = {
       gtag('js', new Date());
 
       gtag('config', 'G-WMSB95CB9V');
+
+      // Auto-track WhatsApp Conversions and Survey clicks
+      document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('click', (event) => {
+          const link = event.target.closest('a');
+          if (!link) return;
+          
+          const href = link.getAttribute('href') || '';
+          const text = link.textContent || '';
+          
+          if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+            const isSurvey = href.toLowerCase().includes('survey') || text.toLowerCase().includes('survey');
+            
+            if (isSurvey) {
+              gtag('event', 'click_survey', {
+                'event_category': 'Conversion',
+                'event_label': 'WhatsApp Survey Click',
+                'value': 1.0
+              });
+            } else {
+              gtag('event', 'click_whatsapp', {
+                'event_category': 'Conversion',
+                'event_label': 'WhatsApp Chat Click',
+                'value': 1.0
+              });
+            }
+          } else if (href.includes('#lokasi') || href.toLowerCase().includes('survey') || text.toLowerCase().includes('survey')) {
+            gtag('event', 'click_survey', {
+              'event_category': 'Engagement',
+              'event_label': 'Anchor Survey Click'
+            });
+          }
+        });
+      });
     </script>
 
     <meta charset="UTF-8" />
